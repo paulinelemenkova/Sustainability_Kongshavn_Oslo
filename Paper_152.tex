@@ -1,0 +1,213 @@
+%  LaTeX support: latex@mdpi.com 
+%  For support, please attach all files needed for compiling as well as the log file, and specify your operating system, LaTeX version, and LaTeX editor.
+
+%=================================================================
+\documentclass[constrmater,article,submit,pdftex,moreauthors]{Definitions/mdpi} 
+
+% MDPI internal commands
+\firstpage{1} 
+\makeatletter 
+\setcounter{page}{\@firstpage} 
+\makeatother
+\pubvolume{1}
+\issuenum{1}
+\articlenumber{0}
+\pubyear{2023}
+\copyrightyear{2023}
+%\externaleditor{Academic Editor: Firstname Lastname}
+\datereceived{14 June 2023} 
+%\daterevised{} % Only for the journal Acoustics
+\dateaccepted{} 
+\datepublished{} 
+\hreflink{https://doi.org/} % If needed use \linebreak
+%\doinum{}
+
+%=================================================================
+% Add packages and commands here. The following packages are loaded in our class file: fontenc, inputenc, calc, indentfirst, fancyhdr, graphicx, epstopdf, lastpage, ifthen, lineno, float, amsmath, setspace, enumitem, mathpazo, booktabs, titlesec, etoolbox, tabto, xcolor, soul, multirow, microtype, tikz, totcount, changepage, attrib, upgreek, cleveref, amsthm, hyphenat, natbib, hyperref, footmisc, url, geometry, newfloat, caption
+
+\graphicspath{{figures/}} % path to folder with figures
+\usepackage{subcaption}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{gensymb} % for \textdegree
+\usepackage{tabularx}
+
+%=================================================================
+% Full title of the paper (Capitalized)
+\Title{Stabilization/Solidification Tests on Dredged Masses from Kongshavn, Port of Oslo}
+
+% MDPI internal command: Title for citation in the left column
+\TitleCitation{Stabilization/Solidification Tests on Dredged Masses from Kongshavn, Port of Oslo}
+
+% Author Orchid ID: enter ID or remove command
+\newcommand{\orcidauthorA}{0000-0002-0577-9936} %  Per Add \orcidA{} behind the author's name
+\newcommand{\orcidauthorB}{0000-0002-5759-1089} % Polina Add \orcidB{} behind the author's name
+
+% Authors, for the paper (add full first names)
+\Author{Per Lindh $^{1}$,$^{2}$*\orcidA{} and Polina Lemenkova $^{3}$\orcidB{}}
+
+%\longauthorlist{yes}
+
+% MDPI internal command: Authors, for metadata in PDF
+\AuthorNames{Per Lindh and Polina Lemenkova}
+
+% MDPI internal command: Authors, for citation in the left column
+\AuthorCitation{Lindh, P.; Lemenkova, P.}
+% If this is a Chicago style journal: Lastname, Firstname, Firstname Lastname, and Firstname Lastname.
+
+% Affiliations / Addresses (Add [1] after \address if there is only one affiliation.)
+\address{%
+$^{1}$ \quad Department of Investments Technology and Environment, Swedish Transport Administration, Neptunigatan 52, Box 366, 201 23 Malmö, Sweden. Tel.: +46-0771-921-921. Email: per.lindh@trafikverket.se \\
+$^{2}$ \quad Division of Building Materials, Department of Building and Environmental Technology, Lunds Tekniska Högskola LTH (Faculty of Engineering), Lund University, Box 118, SE-221-00, Lund, Sweden. Email: per.lindh@byggtek.lth.se\\
+$^{3}$ \quad Laboratory of Image Synthesis and Analysis (LISA), École polytechnique de Bruxelles (Brussels Faculty of Engineering), Université Libre de Bruxelles (ULB). Building L, Campus de Solbosch, ULB -- LISA CP165/57, Avenue Franklin Roosevelt 50, Brussels 1000, Belgium. Email: polina.lemenkova@ulb.be
+}
+
+% Contact information of the corresponding author
+\corres{Correspondence: polina.lemenkova@ulb.be; Tel.: +32 471 86 04 59 (P.L.)}
+
+% Current address and/or shared authorship
+%\firstnote{Current address: Affiliation 3.} 
+
+% Abstract (Do not insert blank lines, i.e. \\) 
+\abstract{The experimental results show optimal combination of stabilising agents: 30\% cement (EN 197-1) and 70\% slag (EN 15167-1) with a binder content of $120 kg/m^3$ and a maximum water binder number (VBT) of 5. Such proportions of mixture demonstrate effective soil stabilization both on a pilot test scale and on full scale for industrial works. Furthermore, the results proved good conditions for stabilizing/solidifying of the dredged masses both with regard to the geotechnical properties of soil (compressive strength) and environmental parameters (leaching). However, it should be pointed out that in the case of high water content in dredging masses and wet samples, the secondary condition of a VBT $\le$ 5 will result in a higher need for binder.}
+
+% Keywords
+\keyword{keyword 1; keyword 2; keyword 3; keyword 4; keyword 5; keyword 6; keyword 7; keyword 8; keyword 9; keyword 10} 
+
+% The fields PACS, MSC, and JEL may be left empty or commented out if not applicable
+%\PACS{J0101}
+%\MSC{}
+%\JEL{}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+
+\section{Introduction}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Materials and Methods}
+
+%----------- subsection ----------->
+\subsection{Soil homogenisation and selection of binders}
+
+The selection of binders used for stabilization of soil was adjusted according to our previous studies and several similar projects in Sweden. In the mixing tests, a binder combination of 30\% CEM I (SS-EN 197-1) and 70\% slag (SS-EN 15167-1) was selected as a the most effective combination. Figure \ref{fig01} shows the strengths for different combinations of cement and slag and variations in strength, accordingly. The best effect on strength development was obtained at a slag admixture of 70\% of the total amount of binder. The tests were implemented using various concentrations of water in a mixture of sediments collected from the Port of Oslo with respect to the amount of binder and water binder number (vbt). The selection of the most optimal vbt value was argued based on the previous research performed in Arendal 2 and Gothenburg (southern Sweden) (Lindh and Lemenkova, 2021).
+
+During the testing procedure, the tests were carried out with vbt of 5, 6 and 7 of the dredging materials, where the lowest level corresponds to the most binder in relation to the amount of water in the dredging materials, i.e., "high binder-low water" $H_BL_W$. The ratio of water/binder in the fabricated specimens is reported in Table 3.
+
+A total of 70 test samples were fabricated. For vbt 5 and 6, five specimens were fabricated for each sample test point. Normally, three specimens were used for strength testing and seismic measurements, one for permeability tests and one specimen was in reserve. These reserve specimens were also used in some cases, when some specimens were damaged during demoulding. For the two of the sample points (Sample No. $1\_2$ and Sample No. 3), samples were also produced with vbt 7 to check the robustness and reliability of the recipe.
+
+Before mixing binders into the dredge masses, each dredge mass was homogenised for at least five minutes using mixer. After homogenisation, a certain amount of dredged material and binder was weighed. To calculate the amount of binder, the water content of the dredged material was calculated based on the water ratio and density of the dredged material, see Appendix 2.
+Normally in large-scale projects, a Hobart mixer is used for large quantities of mortar or dredged soil material. However, in this case, because the experiments were performed on a small-scale level, the volumes were too small to use a Hobart mixer without a KitchenAid type eccentric mixer, see Figure \ref{fig01}.
+
+\begin{figure}[H]
+\begin{adjustwidth}{-\extralength}{0cm}
+\centering
+	\hspace{100pt}\includegraphics[width=10.0 cm]{Fig_01.jpg}
+\end{adjustwidth}
+\caption{Photo showing a KitchenAid eccentric mixer. Photo Per Lindh. \label{fig01}}
+\end{figure}
+
+The clayey soil masses and binders were mixed during 5 minutes to obtain a good homogeneity. As a form of manufacturing the test bodies, the piston sampling sleeves were used, according to Swedish practice, see Figure \ref{fig02} showing a standard sampling sleeve. The sleeve has a diameter of approximately 50 mm and a height of 170 mm. The sleeve in the photo is fitted with a lower cover. During the fabrication of the samples, the stabilized dredge masses were placed in the sleeves in several layers. Between each new layer, the sleeves were tapped on a table several times to expel any air that may be trapped in the sleeve during filling. After the fabrication of the test samples, the sleeves were placed into a water bath, i.e. stored under water. 
+
+After about 14 days, the specimens were de-moulded. After demoulding, the samples were trimmed to a length of 100 mm. This means that the samples have a slenderness factor of 2, i.e., the samples have a height corresponding to twice the diameter. This is according to Swedish standard practice and means that ordinary geotechnical testing can be carried out without the conversion factors. 
+
+\begin{figure}[H]
+\begin{adjustwidth}{-\extralength}{0cm}
+\centering
+	\hspace{100pt}\includegraphics[width=10.0 cm]{Fig_02.jpg}
+\end{adjustwidth}
+\caption{A standard sampling sleeve used for sampling soil specimens. Photo Per Lindh. \label{fig02}}
+\end{figure}
+
+%----------- subsection ----------->
+\subsection{Seismic measurements }
+
+Seismic measurements on the samples can be carried out using a special equipment where the natural frequency of the samples is measured. Based on this frequency, the compression wave velocity (VP) of the samples, also called P-wave velocity, can be calculated. The P-wave velocity is linked to the material's modulus of elasticity (E0). However, in this case, the P-wave is measured at different times to evaluate the development of the strength in specimen with time. The equipment for measuring P-wave velocity is and a process of seismic measurements which evaluates P-wave velocity of the specimen followed the existing scheme \cite{Lemenkova202232}.
+
+%----------- subsection ----------->
+\subsection{Subsection}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Results}
+
+Figure 6 shows a graph which illustrates the variation of compressive strength with different proportions between cement and slag. These tests were carried out on dredged masses from Arendal 2 in Gothenburg. In the tests, the total amount of binder is the same but the ratio between cement and slag is varied from 0\% slag to 90\% slag. Samples with 70\% slag give the highest compressive strength. The black dots represent the results from the pressure tests.
+
+\begin{figure}[H]
+\begin{adjustwidth}{-\extralength}{0cm}
+\centering
+	\hspace{100pt}\includegraphics[width=12.0 cm]{Fig_01.jpg}
+\end{adjustwidth}
+\caption{Variation of compressive strength with different proportions between cement and slag. \label{fig03}}
+\end{figure}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Discussion}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Conclusions}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\authorcontributions{Supervision, conceptualization, methodology, software, resources, funding acquisition, and project administration, P.L.; writing---original draft preparation, methodology, software, data curation, visualization, formal analysis, validation, writing---review and editing, and investigation, P.L. All authors have read and agreed to the published version of the manuscript.}
+
+\funding{The publication was funded by the Editorial Office of XXXX, Multidisciplinary Digital Publishing Institute (MDPI), by providing 100\% discount for the APC of this manuscript. }
+
+\institutionalreview{Not applicable.}
+
+\informedconsent{Not applicable.}
+
+\dataavailability{Not applicable} 
+
+\acknowledgments{The authors thank the reviewers for reading, suggestions and comments that improved an earlier version of this manuscript.}
+
+\conflictsofinterest{The authors declare no conflict of interest.} 
+
+\abbreviations{Abbreviations}{
+The following abbreviations are used in this manuscript:\\
+
+\noindent 
+\begin{tabular}{@{}ll}
+MDPI & Multidisciplinary Digital Publishing Institute\\
+LD & Linear dichroism
+\end{tabular}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Optional
+\appendixtitles{no} % Leave argument "no" if all appendix headings stay EMPTY (then no dot is printed after "Appendix A"). If the appendix sections contain a heading then change the argument to "yes".
+\appendixstart
+\appendix
+\section[\appendixname~\thesection]{}
+\subsection[\appendixname~\thesubsection]{}
+The appendix is an optional section that can contain details and data supplemental to the main text---for example, explanations of experimental details that would disrupt the flow of the main text but nonetheless remain crucial to understanding and reproducing the research shown; figures of replicates for experiments of which representative data are shown in the main text can be added here if brief, or as Supplementary Data. Mathematical proofs of results not central to the paper can be added as an appendix.
+
+\begin{table}[H] 
+\caption{This is a table caption.\label{tab5}}
+\newcolumntype{C}{>{\centering\arraybackslash}X}
+\begin{tabularx}{\textwidth}{CCC}
+\toprule
+\textbf{Title1} & \textbf{Title2} & \textbf{Title3}\\
+\midrule
+Data & Data & Data\\
+Data	& Data & Data\\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\section[\appendixname~\thesection]{}
+All appendix sections must be cited in the main text. In the appendices, Figures, Tables, etc. should be labeled, starting with ``A''---e.g., Figure A1, Figure A2, etc.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{adjustwidth}{-\extralength}{0cm}
+%\printendnotes[custom] % Un-comment to print a list of endnotes
+
+\reftitle{References}
+
+%=====================================
+% References, variant A: external bibliography
+%=====================================
+\bibliography{Oslo.bib}
+\nocite{*}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{adjustwidth}
+\end{document}
