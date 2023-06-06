@@ -1,92 +1,56 @@
-%  LaTeX support: latex@mdpi.com 
-%  For support, please attach all files needed for compiling as well as the log file, and specify your operating system, LaTeX version, and LaTeX editor.
-
-%=================================================================
-\documentclass[information,article,submit,pdftex,moreauthors]{Definitions/mdpi} 
-
-% MDPI internal commands
-\firstpage{1} 
-\makeatletter 
-\setcounter{page}{\@firstpage} 
-\makeatother
-\pubvolume{1}
-\issuenum{1}
-\articlenumber{0}
-\pubyear{2023}
-\copyrightyear{2023}
-%\externaleditor{Academic Editor: Firstname Lastname}
-\datereceived{14 June 2023} 
-%\daterevised{} % Only for the journal Acoustics
-\dateaccepted{} 
-\datepublished{} 
-\hreflink{https://doi.org/} % If needed use \linebreak
-%\doinum{}
-
-%=================================================================
-% Add packages and commands here. The following packages are loaded in our class file: fontenc, inputenc, calc, indentfirst, fancyhdr, graphicx, epstopdf, lastpage, ifthen, lineno, float, amsmath, setspace, enumitem, mathpazo, booktabs, titlesec, etoolbox, tabto, xcolor, soul, multirow, microtype, tikz, totcount, changepage, attrib, upgreek, cleveref, amsthm, hyphenat, natbib, hyperref, footmisc, url, geometry, newfloat, caption
-
-\graphicspath{{figures/}} % path to folder with figures
+ \documentclass[final,1p,times,twocolumn]{elsarticle}
+\usepackage{amssymb}
+\usepackage{float}
 \usepackage{subcaption}
-\usepackage{listings}
-\usepackage{xcolor}
-\usepackage{gensymb} % for \textdegree
+\usepackage{graphicx}
+\usepackage{array}
 \usepackage{tabularx}
 
-%=================================================================
-% Full title of the paper (Capitalized)
-\Title{Effects of Water-Binder Ratio on Strength and Seismic Behavior of Stabilized Soil from Kongshavn, Port of Oslo}
+\journal{Archives of Control Sciences}
 
-% MDPI internal command: Title for citation in the left column
-\TitleCitation{Effects of Water-Binder Ratio on Strength and Seismic Behavior of Stabilized Soil from Kongshavn, Port of Oslo}
-
-% Author Orchid ID: enter ID or remove command
-\newcommand{\orcidauthorA}{0000-0002-0577-9936} %  Per Add \orcidA{} behind the author's name
-\newcommand{\orcidauthorB}{0000-0002-5759-1089} % Polina Add \orcidB{} behind the author's name
-
-% Authors, for the paper (add full first names)
-\Author{Per Lindh $^{1}$,$^{2}$*\orcidA{} and Polina Lemenkova $^{3}$\orcidB{}}
-
-%\longauthorlist{yes}
-
-% MDPI internal command: Authors, for metadata in PDF
-\AuthorNames{Per Lindh and Polina Lemenkova}
-
-% MDPI internal command: Authors, for citation in the left column
-\AuthorCitation{Lindh, P.; Lemenkova, P.}
-% If this is a Chicago style journal: Lastname, Firstname, Firstname Lastname, and Firstname Lastname.
-
-% Affiliations / Addresses (Add [1] after \address if there is only one affiliation.)
-\address{%
-$^{1}$ \quad Department of Investments Technology and Environment, Swedish Transport Administration, Neptunigatan 52, Box 366, 201 23 Malmö, Sweden. Tel.: +46-0771-921-921. Email: per.lindh@trafikverket.se \\
-$^{2}$ \quad Division of Building Materials, Department of Building and Environmental Technology, Lunds Tekniska Högskola LTH (Faculty of Engineering), Lund University, Box 118, SE-221-00, Lund, Sweden. Email: per.lindh@byggtek.lth.se\\
-$^{3}$ \quad Laboratory of Image Synthesis and Analysis (LISA), École polytechnique de Bruxelles (Brussels Faculty of Engineering), Université Libre de Bruxelles (ULB). Building L, Campus de Solbosch, ULB -- LISA CP165/57, Avenue Franklin Roosevelt 50, Brussels 1000, Belgium. Email: polina.lemenkova@ulb.be
-}
-
-% Contact information of the corresponding author
-\corres{Correspondence: polina.lemenkova@ulb.be; Tel.: +32 471 86 04 59 (P.L.)}
-
-% Current address and/or shared authorship
-%\firstnote{Current address: Affiliation 3.} 
-
-% Abstract (Do not insert blank lines, i.e. \\) 
-\abstract{In many civil engineering problems, soil is stabilised by a combination of binders and water in parameterised proportions taken as factors. If the conditional ratio of stabilizing agents is known through modelling, then solidification of soil can be achieved by sampling the specimens at a finite number of trials and checking each test to see if the target stabilization degree is achieved. The success of stabilization is then evaluated using the seismic non-destructive tests with measured P-wave velocities passing through samples. Optimisation of process, laboratory testing and data modelling is therefore essential prior to construction works to reduce the costs of the industrial projects where large quantities of soil are to be stabilised. This paper reports the optimised workflow of soil stabilisation through evaluated effects from the two factors controlling the development of strength. In particular, (1) the ratio between water and binder, and (2) the proportions of different binders (cement/slag) were changed experimentally in a mixture of samples to evaluate the strength of soil with various amount of water and combination of binders. The experimental results show optimal combination of stabilising agents: 30\% cement (EN 197-1) and 70\% slag (EN 15167-1) with a binder content of $120 kg/m^3$ and a maximum water binder ratio (VBT) of 5. Such proportions of mixture demonstrated effective soil stabilization both on a pilot test scale and on full scale for industrial works. The correlation between compressive strength and relative deformation of specimens was investigated revealed that the strength is the highest values for VBT = 5 and the lowest for VBT = 7. In the case of high water content in soil and wet samples, the condition of a VBT $\le$ 5 will require a higher amount of binder.}
-
-% Keywords
-\keyword{keyword 1; keyword 2; keyword 3; keyword 4; keyword 5; keyword 6; keyword 7; keyword 8; keyword 9; keyword 10} 
-
-% The fields PACS, MSC, and JEL may be left empty or commented out if not applicable
-\PACS{81.40.Cd; 81.40.Ef; 62.20.Qp; 83.50.Xa; 45.70.Mg; 92.40.Lg; 81.40.Lm; 62.20.M–}
-\MSC{76Axx; 74Exx; 74Fxx}
-\JEL{Q00; Q01; Q24; Q55; Q56}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{document}
 
+\begin{frontmatter}
+
+\title{Effects of Water-Binder Ratio on Strength and Seismic Behavior of Stabilized Soil from Kongshavn, Port of Oslo}
+
+\author[label1,label2]{Per Lindh}
+\author[label3]{Polina Lemenkova}
+\affiliation[label1]{organization={Department of Investments Technology and Environment, Swedish Transport Administration},
+             addressline={Neptunigatan 52, Box 366, Tel.: +46-0771-921-921. Email: per.lindh@trafikverket.se},
+            city={Malmö},
+            postcode={SE-201-23},
+             country={Sweden}
+             }
+\affiliation[label2]{organization={Division of Building Materials, Department of Building and Environmental Technology, Lunds Tekniska Högskola LTH (Faculty of Engineering), Lund University},
+            addressline={Box 118, Email: per.lindh@byggtek.lth.se},
+             city={Lund},
+            postcode={SE-221-00},
+             country={Sweden}
+            }
+\affiliation[label3]{organization={Laboratory of Image Synthesis and Analysis (LISA), École polytechnique de Bruxelles (Brussels Faculty of Engineering), Université Libre de Bruxelles (ULB)},
+            addressline={Avenue Franklin D. Roosevelt 50, Building L, Campus de Solbosch, ULB -- LISA CP165/57, Tel.: +32 471 86 04 59 Email: polina.lemenkova@ulb.be}, 
+            city={Brussels},
+            postcode={1050}, 
+            country={Belgium}
+            }
+
+\begin{abstract}
+In many civil engineering problems, soil is stabilised by a combination of binders and water in parameterised proportions taken as factors. If the conditional ratio of stabilizing agents is known through modelling, then solidification of soil can be achieved by sampling the specimens at a finite number of trials and checking each test to see if the target stabilization degree is achieved. The success of stabilization is then evaluated using the seismic non-destructive tests with measured P-wave velocities passing through samples. Optimisation of process, laboratory testing and data modelling is therefore essential prior to construction works to reduce the costs of the industrial projects where large quantities of soil are to be stabilised. This paper reports the optimised workflow of soil stabilisation through evaluated effects from the two factors controlling the development of strength. In particular, (1) the ratio between water and binder, and (2) the proportions of different binders (cement/slag) were changed experimentally in a mixture of samples to evaluate the strength of soil with various amount of water and combination of binders. The experimental results show optimal combination of stabilising agents: 30\% cement (EN 197-1) and 70\% slag (EN 15167-1) with a binder content of $120 kg/m^3$ and a maximum water binder ratio (VBT) of 5. Such proportions of mixture demonstrated effective soil stabilization both on a pilot test scale and on full scale for industrial works. The correlation between compressive strength and relative deformation of specimens was investigated revealed that the strength is the highest values for VBT = 5 and the lowest for VBT = 7. In the case of high water content in soil and wet samples, the condition of a VBT $\le$ 5 will require a higher amount of binder.
+\end{abstract}
+
+\begin{keyword}
+
+\end{keyword}
+
+\end{frontmatter}
+
+%% \linenumbers
+
+%% main text
 \section{Introduction}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Materials and Methods}
-
 %----------- subsection ----------->
 \subsection{Soil homogenisation and selection of binders}
 
@@ -98,6 +62,7 @@ A total of 70 test samples were fabricated. For vbt 5 and 6, five specimens were
 
 Before mixing binders into the dredge masses, each dredge mass was homogenised for at least five minutes using mixer. After homogenisation, a certain amount of dredged material and binder was weighed. To calculate the amount of binder, the water content of the dredged material was calculated based on the water ratio and density of the dredged material, see Appendix 2.
 Normally in large-scale projects, a Hobart mixer is used for large quantities of mortar or dredged soil material. However, in this case, because the experiments were performed on a small-scale level, the volumes were too small to use a Hobart mixer without a KitchenAid type eccentric mixer, see Figure \ref{fig01} (a).
+
 
 \begin{figure}[H]
 \makebox[1.0\linewidth][r]{%
@@ -130,34 +95,27 @@ Seismic measurements on the samples can be carried out using a special equipment
 After trimming of specimens and measuring their resonance frequency, the specimens were placed into the plastic bags. To ensure high humidity in the plastic bags, a piece of moistened paper was placed in each plastic bag. After curing, the samples were pressed to failure in a 100 kN pressure press of the brand MTS, see Figure \ref{fig03} showing the MTS 810 servohydraulic universal testing machine used for test compressing the specimens.
 
 \begin{figure}[H]
-\begin{adjustwidth}{-\extralength}{0cm}
 \centering
-	\hspace{100pt}\includegraphics[width=9.0 cm]{Fig_03.jpg}
-\end{adjustwidth}
+	\includegraphics[width=9.0 cm]{Fig_03.jpg}
 \caption{MTS 810 servohydraulic universal testing machine with maximum force capacity of 10 t in compression/tension used for test compressive strength of the specimens. Photo: Per Lindh. \label{fig03}}
 \end{figure}
 
 The loading rate was 1\% of the height of the specimen per minute, i.e., 1.0 mm/min, which is in accordance with SS-EN 16907-4. However, it should be mentioned that the Swedish Geotechnical Institute (SGI) uses 1.2 mm/min as adjusted to the local needs. However, this small difference has no significance for the determination of the strength of the soil material. In connection with these tests, the additional experiments were also carried out using the calorimeters to assess different reactions from different vbt and then evaluating the P-wave velocities in the samples, see Appendix 3.
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Results}
 
 Figure \ref{fig04} shows a graph which illustrates the variation of compressive strength with different proportions between cement and slag. These tests were carried out on dredged masses from Arendal 2 in Gothenburg. In the tests, the total amount of binder is the same but the ratio between cement and slag is varied from 0\% slag to 90\% slag. Samples with 70\% slag give the highest compressive strength. The black dots represent the results from the tests on uniaxial compressive strength.
 
 \begin{figure}[H]
-\begin{adjustwidth}{-\extralength}{0cm}
 \centering
-	\hspace{100pt}\includegraphics[width=14.0 cm]{Fig_04.jpg}
-\end{adjustwidth}
+	\includegraphics[width=14.0 cm]{Fig_04.jpg}
 \caption{Variation of compressive strength with different proportions between cement and slag. \label{fig04}}
 \end{figure}
 
 The results of the evaluation of geotechnical soil properties are based on the performed resonance frequency measurement and tests of Uniaxial Compressive Strength (UCS). As the resonance frequency measurements are non-destructive, the same specimens were measured on several occasions and the development of the P-wave velocity over time could be followed, see Figure \ref{fig05}. Here, Figure \ref{fig05} shows a graph of the P-wave velocity in relation to curing time. The samples here were stored at 20°C. The blue points correspond to the vbt = 5, green points correspond to vbt = 6 and red points correspond to vbt = 7. Different points give different growth, which can depend on both grain distribution and impurity content.
 
 \begin{figure}[H]
-\begin{adjustwidth}{-\extralength}{0cm}
-	\hspace{130pt}\includegraphics[width=14.0 cm]{Fig_05.jpg}
-\end{adjustwidth}
+	\includegraphics[width=14.0 cm]{Fig_05.jpg}
 \caption{Development of P-wave velocity with curing time. \label{fig05}}
 \end{figure}
 
@@ -165,62 +123,25 @@ The uniaxial compressive strength tests (UCS) were carried out according to the 
 
 Table \ref{tab01} shows the values of the compressive strength and vbt (water/binder ratio) for specimens collected in various test sites (TS). The specimens within the same vbt, e.g., $1\_1$ to $1\_4$, show small variation in strength. The same applies to the other vbt. Test sampels No. $1\_1$ and test body $1\_2$, however, shows a different stiffness compared to other samples. Such a variation in stiffness is normal and is due to the natural individual parameters of soil masses. The results of the tests on the compressive strength and water/binder ratio for specimens collected from the sampling point No. 3 are also shown in the same Table \ref{tab01}. Specimen $4\_4$ from TS 4 obtained a significantly higher strength compared to the others with the same vbt and should therefore be considered as an outlier.
 
-\begin{table}[H] 
-\caption{Compressive strength (kPa) measured by UCS tests with relation to the water/binder ratio (vbt) for specimens collected in sample test sites (TS) No. $1\_2$, 3 and 4.\label{tab01}}
-\begin{tabularx}{\textwidth}{CCC||CCC||CCC }
-\toprule
-\textbf{TS $1\_2$} & \textbf{vbt} & \textbf{UCS} & \textbf{TS 3} & \textbf{vbt} & \textbf{UCS} & \textbf{TS 4} & \textbf{vbt} & \textbf{UCS}\\
-\midrule
-$1\_1$ & 5 & 829 & $3\_1$ & 5 & 700 & $4\_2$ & 5 & 740 \\
-$1\_2$ & 5 & 833 & $3\_2$ & 5 & 822 & $4\_3$ & 5 & 796 \\
-$1\_3$ & 5 & 853 & $3\_3$ & 5 & 829 & $4\_4$ & 5 & 1237 \\
-$1\_4$ & 5 & 859 & $3\_6$ & 6 & 298 & $4\_6$ & 6 & 373 \\
-$1\_6$ & 6 & 529 & $3\_7$ & 6 & 304 & $4\_7$ & 6 & 439 \\
-$1\_7$ & 6 & 569 & $3\_8$ & 6 & 318 & $4\_8$ & 6 & 512 \\
-$1\_8$ & 6 & 597 & $3\_9$ & 6 & 295 & -- & -- & -- \\
-$1\_11$ & 7 & 297 & $3\_11$ & 7 & 162 & -- & -- & -- \\
-$1\_12$ & 7 & 272 & $3\_12$ & 7 & 148 & -- & -- & -- \\
-$1\_13$ & 7 & 298 & $3\_13$ & 7 & 133 & -- & -- & -- \\
--- & -- & -- & $3\_14$ & 7 & 150 & -- & -- & -- \\
-\bottomrule
-\end{tabularx}
-\end{table}
+
 
 Table \ref{tab02} shows the compressive strength with relation to the water/binder ratio (vbt) for the test points No. 5, 6 and 8, and additionally the P-wave velocity for test site 5. In connection with the UCS tests, the P-wave measurements were performed to correlate the P-wave velocity against the compressive strength. Therefore, after the measurements of the P-wave velocity, the values of the compressive strength was calculated based on the data on speed of waves which correlate with the strength of the materials. The results are reported in Table \ref{tab02}. The results of the measured P-wave velocity is shown in Figure \ref{fig08}.
 
-\begin{table}[H] 
-\caption{Compressive strength (kPa) measured by UCS tests with regard to water/binder ratio (vbt) for samples collected in test sites (TS) No. 5, 6 and 8, and P-wave velocity (m/s) for TS 5.\label{tab02}}
-\begin{tabularx}{\textwidth}{CCCC||CCC||CCC }
-\toprule
-\textbf{TS 5} & \textbf{vbt} & P-w & \textbf{UCS} & \textbf{TS 6} & \textbf{vbt} & \textbf{UCS} & \textbf{TS 8} & \textbf{vbt} & \textbf{UCS}\\
-\midrule
-$5\_1$ & 5 & 1161 & 539 & $6\_1$ & 5 & 993 & $8\_1$ & 5 & 1222 \\
-$5\_2$ & 5 & 1160 & 538 & $6\_2$ & 5 & 985 & $8\_2$ & 5 & 1081 \\
-$5\_3$ & 5 & 1154 & 532 & $6\_3$ & 5 & 987 & $8\_3$ & 5 & 991 \\
-$5\_6$ & 6 & 871 & 303 & $6\_6$ & 6 & 688 & $8\_6$ & 6 & 584 \\
-$5\_7$ & 6 & 873 & 304 & $6\_7$ & 6 & 697 & $8\_7$ & 6 & 453 \\
-$5\_8$ & 6 & 873 & 304 & $6\_8$ & 6 & 618 & $8\_8$ & 6 & 633 \\
-\bottomrule
-\end{tabularx}
-\end{table}
+
 
 Figure \ref{fig06} shows a graph of correlation between the pressure (kPa) and relative deformation of the samples from sample tests site point $No. 1\_2$. The first number in the numbering is the test point, in this case point $No. 1\_2$. The second number is a serial number. Samples 1 to 4 have vbt = 5, samples 6 to 8 have vbt = 6 and samples 11 to 13 have vbt = 7. The differences in compressive strength follow very well the expected result with the highest strength for vbt = 5 and the lowest strength for vbt = 7 .
 
 \begin{figure}[H]
-\begin{adjustwidth}{-\extralength}{0cm}
-%\centering
-	\hspace{130pt}\includegraphics[width=13.0 cm]{Fig_06.jpg}
-\end{adjustwidth}
+\centering
+	\includegraphics[width=13.0 cm]{Fig_06.jpg}
 \caption{Correlation between the pressure (kPa) and relative deformation of the specimens from the test point No. $1\_2$. \label{fig06}}
 \end{figure}
 
 Accordingly, for a sample point No. 3, an expected pattern is shown in the same way in specimens with values of water/binder ratio between vbt 5, 6 and 7, see Figure \ref{fig07}. However, the specimens collected from the sample test point $3\_1$ exhibit slightly lower strength compared to the other two test samples with vbt 5. 
 
 \begin{figure}[H]
-\begin{adjustwidth}{-\extralength}{0cm}
-%\centering
-	\hspace{130pt}\includegraphics[width=13.0 cm]{Fig_07.jpg}
-\end{adjustwidth}
+\centering
+	\includegraphics[width=13.0 cm]{Fig_07.jpg}
 \caption{Correlation between the pressure (kPa) and relative deformation of the specimens from the test point No. 3. \label{fig07}}
 \end{figure}
 
@@ -229,20 +150,16 @@ For samples from the point No. 3, less variation in stiffness was detected compa
 Figure \ref{fig08} shows a graph of the P-wave velocity as a function of the compressive strength (UCS). The variations at a higher strength are completely normal.
 
 \begin{figure}[H]
-\begin{adjustwidth}{-\extralength}{0cm}
-%\centering
-	\hspace{130pt}\includegraphics[width=13.0 cm]{Fig_08.jpg}
-\end{adjustwidth}
+\centering
+	\includegraphics[width=13.0 cm]{Fig_08.jpg}
 \caption{P-wave velocity as a function of the compressive strength (UCS). \label{fig08}}
 \end{figure}
 
 Regarding the compressive strength and the relationship between the P-wave velocity and strength, the testing from this study is well in line with what can be expected according to the other data, see Figure \ref{fig09}. 
 
 \begin{figure}[H]
-\begin{adjustwidth}{-\extralength}{0cm}
-%\centering
-	\hspace{130pt}\includegraphics[width=13.0 cm]{Fig_09.jpg}
-\end{adjustwidth}
+\centering
+	\includegraphics[width=13.0 cm]{Fig_09.jpg}
 \caption{P-wave velocity as a function of the compressive strength (UCS). \label{fig09}}
 \end{figure}
 
@@ -251,49 +168,30 @@ Figure \ref{fig09} shows a graph of the P-wave velocity in relation to the uniax
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Discussion}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Conclusions}
 The results from the lab tests both at LTH and at SGI show that the dredged masses are well suited to stabilize/solidify with an inorganic binder consisting of 30\% cement type CEM I (according to CEN 197-1) and 70\% ground granulated blast-furnace slag (GGBFS) according to EN 15167-1. The requirement for the amount of binder should be at least 120 kg/m3 with a secondary condition that the weight ratio between the weight of water contained and the weight of binder added should be $\leq$ 5. It should be pointed out that in the case of high water ratios in the dredged masses, more weight of water, the secondary condition will be a vbt $\leq$ 5 result in a higher amount of binder.
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\authorcontributions{Supervision, conceptualization, methodology, software, resources, funding acquisition, and project administration, P.L. (Per Lindh); writing---original draft preparation, methodology, software, data curation, visualization, formal analysis, validation, writing---review and editing, and investigation, P.L. (Polina Lemenkova) All authors have read and agreed to the published version of the manuscript.}
 
-\funding{The publication was funded by the Editorial Office of Information, Multidisciplinary Digital Publishing Institute (MDPI), by providing 100\% discount for the APC of this manuscript. }
-
-\institutionalreview{Not applicable.}
-
-\informedconsent{Not applicable.}
-
-\dataavailability{Not applicable} 
-
-\acknowledgments{The authors thank the reviewers for reading, suggestions and comments that improved an earlier version of this manuscript.}
-
-\conflictsofinterest{The authors declare no conflict of interest.} 
-
-\abbreviations{Abbreviations}{
-The following abbreviations are used in this manuscript:\\
-
-\noindent 
-\begin{tabular}{@{}ll}
-GGBFS & Ground Granulated Blast-Furnace Slag \\
-UCS & Uniaxial Compressive Strength \\
-MTS & Material Testing Systems \\
-SGI & Swedish Geotechnical Institute
-\end{tabular}
-}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{adjustwidth}{-\extralength}{0cm}
-%\printendnotes[custom] % Un-comment to print a list of endnotes
-
-\reftitle{References}
-
-%=====================================
-% References, variant A: external bibliography
-%=====================================
+%% If you have bibdatabase file and want bibtex to generate the
+%% bibitems, please use
+%%
+\bibliographystyle{elsarticle-num} 
+%%  \bibliography{<your bibdatabase>}
 \bibliography{Oslo.bib}
 \nocite{*}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\end{adjustwidth}
+%% else use the following coding to input the bibitems directly in the
+%% TeX file.
+
+\begin{thebibliography}{00}
+
+%% \bibitem{label}
+%% Text of bibliographic item
+
+\bibitem{}
+
+\end{thebibliography}
 \end{document}
+\endinput
+%%
+%% End of file `elsarticle-template-num.tex'.
