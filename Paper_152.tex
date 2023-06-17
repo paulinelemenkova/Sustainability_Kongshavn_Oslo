@@ -110,13 +110,13 @@ Before mixing binders into the dredge masses, each dredge mass was homogenised f
 
 \begin{table}[H] 
 \begin{threeparttable}
-\caption{This is a table caption.\label{tab01}}
+\caption{Calculation of binder admixture in a laboratory.\label{tab01}}
 %\newcolumntype{C}{>{\centering\arraybackslash}X}
 \begin{tabularx}{\textwidth}{CCCCCCCCCC}
 \toprule
-\textbf{Title1} & \textbf{Title2} & \textbf{Title3} & \textbf{Title4} & \textbf{Title5} & \textbf{Title6} & \textbf{Title7} & \textbf{Title8} & \textbf{Title9} & \textbf{Title10} \\
+\textbf{ID} & \textbf{w} & \textbf{$\gamma$} & \textbf{$m_t$} & \textbf{$m_s$} & \textbf{$m_w$} & \textbf{vbt} & \textbf{$m_b$} & \textbf{$m_{cement}$} & \textbf{$m_{slag}$} \\
 \midrule
-Data & Data & Data & Data & Data & Data & Data & Data & Data & Data\\
+$1\_2$ & 72.6 & 1.54 & 2.5 & 1.448 & 1.052 & 5 & 0.21 & 0.063 & 0.147\\
 Data & Data & Data & Data & Data & Data & Data & Data & Data & Data\\
 Data & Data & Data & Data & Data & Data & Data & Data & Data & Data\\
 Data & Data & Data & Data & Data & Data & Data & Data & Data & Data\\
@@ -131,9 +131,18 @@ Data & Data & Data & Data & Data & Data & Data & Data & Data & Data\\
 \bottomrule
 \end{tabularx}
 \begin{tablenotes}
-      \small
-      	\item \emph{Notations in Table 1:} . 
-	\item \emph{Comments for }: .
+      %\small
+      	\item \emph{Notations in Table 1 and comments for abbreviations: ID -- sample number; 
+	\item w -- water ratio, \%; 
+	\item $\gamma$ -- density of soil ($\gamma_{dredged}$), $\frac{ton}{m^3}$}; 
+	\item $m_t$, kg; 
+	\item $m_s$ = $\frac{m_t}{1+w}$; 
+	\item $m_w$ = $m_t - m_s$ (kg);
+	\item vbt is defined for amount of binder;
+	\item $m_b$ = $\frac{m_w}{5}$;
+	\item $m_{cement} = {m_b}\times 0.3$;
+	\item $m_{slag} = {m_b}\times 0.7$;
+	\item The computed values are given for $m_t$ kg of dredged soil material.
     \end{tablenotes}
   \end{threeparttable}
 
