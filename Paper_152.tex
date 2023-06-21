@@ -37,6 +37,7 @@
 \usepackage{booktabs}
 \usepackage{caption}
 \usepackage{adjustbox}
+\usepackage{longtable}
 
 %=================================================================
 % Full title of the paper (Capitalized)
@@ -101,16 +102,16 @@ The literature abounds with diverse approaches of various stabilization techniqu
 
 New mainstream directions in civil and geotechnical engineering include the use of optimised blends of novel admixtures besides traditional binders used in engineering \cite{NAGY,Yi,Lindh202305,Ismail}. Sustainable binders can be used for amendment of strength, durability and absorption of native clayey soil, such as polymeric materials \cite{geotechnics1020021,Moustafa,LIU2023101044}, pozzolan-blended binders \cite{Consoli} or glass powder \cite{Filho} used as admixtures. Such improvements aim at increasing the long-term effects from novel admixtures on soil strength. With this regard, another factor for success in soil stabilisation includes a period of treatment \cite{Howard,Romera}. As a general rule, the effects of s/s process increase with curing time which is reflected in the development of physico-mechanical properties of soil. For instance, existing studies reported difference in mineralogical evolution, compressive strength, porosity, and pH of s/s soil and cemented materials over curing time, according to the tests taken in key control days \cite{Chrysochoouetal2010,Lemenkova202131,Shrestha}. 
 
-These and many related approaches are based on proposing more efficient binder recipes to improve engineering properties of soil.  But they still require considering other factors such as the ratio of water with regard to binder content in each test case for analysis of strength. Hence, besides the selection of binder types, the effective soil stabilisation requires a dosage of suitable binders and the addition of water in balanced proportions with regard to the the structure of soil. 
+These and many related approaches are based on proposing more efficient binder recipes to improve engineering properties of soil. But they still require considering other factors such as the ratio of water with regard to binder content in each test case for analysis of strength. Hence, besides the selection of binder types, the effective soil stabilisation requires a dosage of suitable binders and the addition of water in balanced proportions with regard to the the structure of soil. Our new formulation of soil stabilisation problem builds on experiments with water-binder ratio which affect hydration process in cementitious materials and evaluated using seismic methods \cite{Guoetal2021,Lindh202309,CHI2021138699}. The developed workflow framework is adjusted to sediments collected in the harbour of Port of Oslo as a continuation of our previous work \cite{a16060303}. Here, we employ a series of engineering and environmental tests to evaluate properties fo soil after stabilisation with various w/b percentage.
 
-Evaluating soil strength after stabilisation may be performed using either traditional methods with UCS testing machine, or using applied geophysical methods as non-destructive tests. Seismic sonic methods have been with great success for evaluation of strength properties of stabilised soil \cite{Lopes,Lindh202210,CRISTELO20151}. The goal of such methods is to evaluate the increase in cementation of soil through recorded P-wave's velocity which increases along with stiffness and strength of materials \cite{ZHANG2021143,Lindh2023JMBM,Abdi}. Hence, the acoustic acquisition and calculation of elastic wave velocities serves as an indicator of success in soil stabilisation. 
+Evaluating soil strength after stabilisation may be performed using either traditional methods with UCS testing machine, or using applied geophysical methods as non-destructive tests. Seismic sonic methods have been with great success for evaluation of strength properties of stabilised soil \cite{Lopes,Lindh202210,CRISTELO20151}. The goal of such methods is to evaluate the increase in cementation of soil through recorded P-wave's velocity which increases along with stiffness and strength of materials \cite{ZHANG2021143,Lindh2023JMBM,Abdi}. Hence, the acoustic acquisition and calculation of elastic wave velocities serves as an indicator of success in soil stabilisation. The effects of the hydration of cement and cementitious binders, used in materials science to study the evolution of soil hardening have been studied previously \cite{Ardah,Sree,su142113736} and prove the increase of strength and stiffness of stabilised soil. Likewise, the idea of using seismic methods in geotechnical engineering has been used for nondestructive testing for evaluating soil integrity and structural failure based on the relationship between the velocity and the strength and stiffness of materials \cite{Yu}.  
 
 \subsection{Objectives and motivation}
 
 In light of the above discussion, in this paper we study the benefits of exploiting the effects of optimised binder proportions and water content on strength and deformation of soil. The optimised workflow is proposed to achieve the most effective procedure and reduce high costs of soil processing in construction industry. The best combination of stabilizing agents for soil treatment ensures the control of the soil quality for geotechnical suitability of foundations before construction works in a harbour. To this end, we introduce a new method for improving the stabilization efficiency by setting up an updated sampling procedure which included 4 Batches of specimens. Thus, we use the activated carbon (powdered charcoal) for pre-treatment of soil materials one month before the stabilization, and apply the Belite Calcium Sulfoaluminate (BCSA) type cement which has environmentally quality compared to the Portland cement due to low $CO_2$ emissions. the soil pre-treated with these materials demonstrated better environmental characteristics. 
 
-\pagebreak
-\section{Project extent and goals}
+%\pagebreak
+\section{Project scale and goals}
 The Department of Building Materials at Lund University has been commissioned by the Norconsult to investigate the possibilities of stabilizing/solidifying contaminated dredged masses from Oslo Harbour, Kongshavn. The assignment has been carried out partly at the Building Materials department, partly at the Swedish Geotechnical Institute (SGI). The stabilization/solidification methodology has been used in several projects in Sweden \cite{ZefferSamuelsson,Carling}, including the port of Gävle and the port of Gothenburg (Arendal 2). In both of these projects, a large amount of contaminated dredged material has been stabilized to be used in the construction of the port area. The methodology is used both as a pilot test and as a full-scale project with sample points collected in locations shown in Figure \ref{fig00}.
 
 \begin{figure}[H]
@@ -123,24 +124,33 @@ The Department of Building Materials at Lund University has been commissioned by
 
 Table \ref{tab00} summarises different projects and reported locations with major sample points where dredged masses or contaminated soil are stabilized/solidified, based on the STABCON report \cite{SGI2011} and other sources. The mixing tests aim to investigate the possibility of using binders to stabilize the contaminated soil material with regard to geotechnical (strength) and environmental (leaching and permeability) properties.
 
-\begin{table}[H] 
-\caption{Status of the compiled solidification/stabilisation (s/s) soil and sediments projects in key kocations of Nordic countries, based on STABCON and other sources (as for 2023).\label{tab00}}
-%\newcolumntype{C}{>{\centering\arraybackslash}X}
-\begin{tabularx}{\textwidth}{lCCCC}
-\toprule
-\textbf{Location} & \textbf{Completed} & \textbf{Ongoing} & \textbf{Permission} & \textbf{Investigation} \\
-\midrule
+\begin{longtable}{@{\extracolsep{\fill}}p{3.5cm}ccccc@{}}
+\caption{Status of the compiled solidification/stabilisation (s/s) soil and sediments projects in key kocations of Nordic countries, based on STABCON and other sources (as for 2023).} \label{tab00}\\
+\hline \textbf{Location} & \textbf{Completed} & \textbf{Ongoing} & \textbf{Permission} & \textbf{Investigation} \\ \hline 
+\endfirsthead
+
+\multicolumn{5}{c}%
+{{\tablename\ \thetable{} -- continued from previous page}} \\
+\textbf{Location} & \textbf{Completed} & \textbf{Ongoing} & \textbf{Permission} & \textbf{Investigation} \\ \hline 
+\endhead
+
+\hline \multicolumn{5}{r}{{Continued on next page}} \\ \hline
+\endfoot
+
+\hline \hline
+\endlastfoot
+
 \bf{Norway} &  &  &  &  \\
-\midrule
+\hline
 Bærum & X & -- & -- & -- \\
 Gilhus & -- & -- & -- & X\\
 Grenland	& -- & -- & -- & X\\
 Bergen & -- & -- & -- & X\\
 Trondheims hamn & X & -- & -- & -- \\
 Hammerfest & X & -- & -- & -- \\
-\midrule
+\hline
 \bf{Sweden} &  &  &  &  \\
- \midrule
+\hline
 Hammarby sjöstad & X & -- & -- & -- \\
 Västra Kungsholmen & X & -- & -- & -- \\
 Oxelösunds hamn & --  & -- & X & -- \\
@@ -158,18 +168,18 @@ Malmö & X & -- & -- & -- \\
 Norra Djurgårdsstaden & -- & -- & -- & X \\
 Luleå hamn & -- & -- & -- & X \\
 Sundsvall, Östrand & -- & -- & -- & X \\
- \midrule
+\hline
 \bf{Finland}  &  &  &  &  \\
-  \midrule
+\hline
 Sörnäs strand & X & -- & -- & -- \\
 Hamina hamn & X & -- & -- & -- \\
 Fredrikshamn & X & -- & -- & -- \\
 Mariehamn & X & -- & -- & -- \\
 Åbo hamn & X & -- & -- & -- \\
 Kokkola hamn & -- & -- & X & -- \\
-\bottomrule
-\end{tabularx}
-\end{table}
+\hline
+\end{longtable}
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Materials and Methods}
