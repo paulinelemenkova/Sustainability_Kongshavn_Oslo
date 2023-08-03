@@ -306,15 +306,15 @@ The tests were implemented using various concentrations of water in a mixture of
 %\newcolumntype{C}{>{\centering\arraybackslash}X}
 \begin{tabularx}{\textwidth}{CCCCCCCCCC}
 \toprule
-\textbf{ID} & \textbf{\hl{w} %MDPI: Please confirm if should be italic as equation.
-} & \boldmath{$\gamma$} & \boldmath{$m_t$} & \boldmath{$m_s$} & \boldmath{$m_w$} & \textbf{\hl{w/b} %MDPI: Please confirm if should be italic as equation. Please confirm whole manuscript.
+\textbf{ID} & \textbf{w %MDPI: Please confirm if should be italic as equation. % <-- Authors' reply: no, it is a sign for water ration (explained below the table).
+} & \boldmath{$\gamma$} & \boldmath{$m_t$} & \boldmath{$m_s$} & \boldmath{$m_w$} & \textbf{w/b %MDPI: Please confirm if should be italic as equation. Please confirm whole manuscript. % <-- Authors' reply: no, this is an abbreviation "water/binder" (explained above and checked the whole manuscript).
 } & \boldmath{$m_b$} & \boldmath{$m_{cement}$} & \boldmath{$m_{slag}$} \\
 \midrule
-\hl{1\_2} %MDPI: 
+1\_2 %MDPI:  % <-- Authors' reply: this is correct sample ID.
  & 72.6 & 1.54 & 2.5 & 1.448 & 1.052 & 5 & 0.210 & 0.063 & 0.147\\
-\hl{1\_2} %MDPI: 
+1\_2 %MDPI:  % <-- Authors' reply: this is correct sample ID.
  & 72.6 & 1.54 & 2.5 & 1.448 & 1.052 & 6 & 0.175 & 0.053 & 0.123\\
-\hl{1\_2} %MDPI: 
+1\_2 %MDPI:  % <-- Authors' reply: this is correct sample ID.
  & 72.6 & 1.54 & 2.5 & 1.448 & 1.052 & 7 & 0.150 & 0.045 & 0.105\\
 3 & 74.74 & 1.57 & 2.5 & 1.431 & 1.069 & 5 & 0.214 & 0.064 & 0.150\\
 3 & 74.74 & 1.57 & 2.5 & 1.431 & 1.069 & 6 & 0.178 & 0.053 & 0.125\\
@@ -327,15 +327,15 @@ The tests were implemented using various concentrations of water in a mixture of
 8 & 54 & 1.68 & 2.5 & 1.623 & 0.877 & 6 & 0.146 & 0.044 & 0.102\\
 \bottomrule
 \end{tabularx}
-\footnotesize{\emph{\hl{Notations} %MDPI: Please confirm if the italics should be retained.
- in \hl{Table} %MDPI: Please confirm if this sentence ''Notations in Table 2 and comments for abbreviations'' can be removed directly
- \ref{tab02} and comments for abbreviations}: \hl{ID---sample number;} %MDPI: We made table footer note into 1 paragraph and removed list item. Please confirm this revision.
+\footnotesize{%MDPI: Please confirm if the italics should be retained. % <-- Authors' reply: italics can be removed.
+%MDPI: Please confirm if this sentence ''Notations in Table 2 and comments for abbreviations'' can be removed directly % <-- Authors' reply: ok, removed.
+ID---sample number; %MDPI: We made table footer note into 1 paragraph and removed list item. Please confirm this revision. % <-- Authors' reply: Yes, we confirm.
  	 w---water ratio, \%; 
 	 $\gamma$---density of soil ($\gamma_{dredged}$), $\frac{ton}{m^3}$; 
 	 $m_t$, kg; 
 	 $m_s$ = $\frac{m_t}{1+w}$; 
 	 $m_w$ = $m_t - m_s$ (kg);
-	 \hl{w/b} is defined as a ratio of water/binder indicating the amount of binder;
+	 w/b is defined as a ratio of water/binder indicating the amount of binder;
 	 $m_b$ is a $m_{binder}$ = $\frac{m_w}{w/b}$;
 	 $m_{cement} = {m_b}\times 0.3$;
 	 $m_{slag} = {m_b}\times 0.7$;
@@ -639,7 +639,7 @@ w/b & water/binder
 		\captionsetup{position=bottom,justification=centering}\caption{}
 	\end{subfigure} \hspace{1mm}
 	\begin{subfigure}[b]{.3\textwidth}
-			\includegraphics[width=4cm]{Fig_K2.jpg}
+			\includegraphics[width=4.0cm]{Fig_K2.jpg}
 		\captionsetup{position=bottom,justification=centering}\caption{}
 	\end{subfigure} \hspace{1mm}
 	\begin{subfigure}[b]{.3\textwidth}
@@ -667,8 +667,9 @@ w/b & water/binder
 		\captionsetup{position=bottom,justification=centering}\caption{}
 	\end{subfigure}
 \vspace{6pt}
-\caption{\hl{Grain} %MDPI: 1. Please use periods as decimal sign instead of commas. e.g., "0,1" should be "0.1". 2. Please provide explanation for sub-figures (a-f). 3. Figure b, there is extra line at left side, please confirm if should be remove.
- distribution in sediments showing dominated fine-grained silts (<0.063 mm).}\label{figA1}
+\caption{Grain %MDPI: 1. Please use periods as decimal sign instead of commas. e.g., "0,1" should be "0.1". 2. Please provide explanation for sub-figures (a-f). 3. Figure b, there is extra line at left side, please confirm if should be remove. 
+% <-- Authors' reply: Figure A1 is corrected with required changes made: 1) periods are used as decimal sign instead of commas; 2) explanations are added; 3) . Figure b is checked and replotted.
+ distribution in sediments showing dominated fine-grained silts (<0.063 mm): \textbf{(a)} soil samples with weight percent of grain content from 18 to 87\%; \textbf{(b)} soil samples with weight percent of grain content from 20 to 94\%; \textbf{(c)} soil samples with weight percent of grain content from 19 to 83\%; \textbf{(d)} soil samples with weight percent of grain content from 8 to 53\%; \textbf{(e)} soil samples with weight percent of grain content from 12 to 73\%; \textbf{(f)} soil samples with weight percent of grain content from 10 to 48\%.}\label{figA1}
 \end{figure}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
