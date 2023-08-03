@@ -1,0 +1,1633 @@
+
+\documentclass[sustainability,article,accept,pdftex,moreauthors]{Definitions/mdpi} 
+
+\firstpage{1} 
+\makeatletter 
+\setcounter{page}{\@firstpage} 
+\makeatother
+\pubvolume{1}
+\issuenum{1}
+\articlenumber{0}
+\pubyear{2023}
+\copyrightyear{2023}
+\externaleditor{Academic Editor: Firstname Lastname}
+\datereceived{22 June 2023} 
+\daterevised{27 July 2023} % Comment out if no revised date
+\dateaccepted{2 August 2023} 
+\datepublished{ } 
+%\datecorrected{} % For corrected papers: "Corrected: XXX" date in the original paper.
+%\dateretracted{} % For corrected papers: "Retracted: XXX" date in the original paper.
+\hreflink{https://doi.org/} % If needed use \linebreak
+%\doinum{}
+%\pdfoutput=1 % Uncommented for upload to arXiv.org
+
+\graphicspath{{figures/}} % path to folder with figures
+%\usepackage{subcaption}
+\usepackage[labelformat=simple]{subcaption}
+\renewcommand\thesubfigure{\alph{subfigure}}
+\DeclareCaptionLabelFormat{subcaptionlabel}{\normalfont(\textbf{#2}\normalfont)}
+\captionsetup[subfigure]{labelformat=subcaptionlabel}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{gensymb} % for \textdegree
+\usepackage{tabularx}
+\usepackage[para,online,flushleft]{threeparttable}
+\usepackage{array}
+\usepackage{makecell, multirow}
+\usepackage{booktabs}
+\usepackage{caption}
+\usepackage{adjustbox}
+%\usepackage{longtable}
+
+%\usepackage[labelformat=simple]{subfig}
+%\renewcommand\thesubfigure{\normalfont(\textbf{\alph{subfigure}})}
+
+%\usepackage{subfigure}
+%\makeatletter
+%\renewcommand{\@thesubfigure}{\normalsize(\textbf{\alph{subfigure}})}
+%\makeatother
+
+
+
+
+
+
+\Title{\highlighting{Effects} of Water--Binder Ratio on Strength and Seismic Behavior of Stabilized Soil from Kongshavn, Port of Oslo}
+%Dear authors,
+%1. The initial layout for your manuscript was done by our layout team. Please do not change the layout, otherwise we cannot proceed to the next step.
+%2. Please do not delete our comments.
+%3. Please revise and answer all questions that we pro-posed. Such as: “It should be italic”; “I confirm”; “I have checked and revised all.”
+%4. Please directly correct on this version. 
+
+
+\TitleCitation{Effects of Water--Binder Ratio on Strength and Seismic Behavior of Stabilized Soil from Kongshavn, Port of Oslo}
+
+
+\newcommand{\orcidauthorA}{0000-0002-0577-9936} %  Per Add \orcidA{} behind the author's name
+\newcommand{\orcidauthorB}{0000-0002-5759-1089} % Polina Add \orcidB{} behind the author's name
+
+
+\Author{\hl{Per Lindh}  $^{1,2}$\orcidA{} 
+%MDPI: 1. Please carefully check the accuracy of names and affiliations. Authorship cannot be changed during this period (including adding new authors/corresponding authors/affiliations or deleting present authors/corresponding authors/affiliations or exchanging author orders. 
+%2. Please confirm all ORCID number.
+ and Polina Lemenkova $^{3,}$*\orcidB{}}
+
+%\longauthorlist{yes}
+
+
+\AuthorNames{Per Lindh and Polina Lemenkova}
+
+
+\AuthorCitation{Lindh, P.; Lemenkova, P.}
+% If this is a Chicago style journal: Lastname, Firstname, Firstname Lastname, and Firstname Lastname.
+
+
+\address{%
+$^{1}$ \quad Department of Investments Technology and Environment, Swedish Transport Administration, Neptunigatan~52, \hl{P.O. Box 366,} %MDPI: Please confirm if PO box can be remove as there are postcodes. 
+ 201 23~\highlighting{Malmö,} %MDPI: Please confirm if city name should be in English without accent.
+ Sweden; \hl{p}%MDPI: We removed uppercase from email. please confirm.
+er.lindh@trafikverket.se \hl{or} %MDPI: There are 2 emails for 1 author, please confirm if should  retained only one email.
+ per.lindh@byggtek.lth.se  \\
+ 
+$^{2}$ \quad Division of Building Materials, Department of Building and Environmental Technology, Lunds Tekniska Högskola LTH \hl{(Faculty of Engineering),} %MDPI: Please confirm to keep format of this information (in parentheses). same as in affiliation 3
+ Lund University, \hl{P.O. Box 118,} \hl{221 00} %MDPI: we revised postcode  format same as affiliation 1. Please confirm.
+ Lund, Sweden\\
+ 
+$^{3}$ \quad Laboratory of Image Synthesis and Analysis (LISA), École Polytechnique de Bruxelles \hl{(Brussels Faculty of Engineering),} Université Libre de Bruxelles (ULB), \hl{Building L, Campus de Solbosch, ULB---LISA CP165/57,} %MDPI: %MDPI: Please check that the address information is complete. The provided information should be arranged from subordinate to superior.
+ Avenue Franklin Roosevelt 50, \hl{1000} %MDPI: We moved postcode before city.
+ Brussels, Belgium
+}
+
+
+\corres{Correspondence: polina.lemenkova@ulb.be; Tel.: +32-471-86-04-59 }
+
+
+\abstract{In many civil engineering problems, soil is stabilized by a combination of binders and {water. The} success of stabilization {is} evaluated {using} seismic {tests} with measured P-wave velocities. Optimization of process, laboratory testing and data modelling {are} essential {to} reduce the costs of the industrial projects. {This} paper reports the optimized workflow of soil stabilization through evaluated effects from the two factors controlling the development of strength{:} (1) the ratio between water and binder{;} (2) the proportions of different binders (cement/slag) were changed experimentally in a mixture of samples to evaluate the strength of soil. The experimental results show an optimal combination {of} 30\% cement {and} 70\% slag with a binder content of 120 \highlighting{kg/m$^3$} %MDPI: We removed the italics from all units. Please confirm this revision whole manuscript.
+ and a maximum water binder ratio \highlighting{(w/b)} %MDPI: Please confirm if should be italic as equation. Please confirm whole manuscript.
+ of 5. Such proportions of mixture demonstrated effective soil stabilization both on a pilot test scale and on full scale for industrial works. The correlation between {the} compressive strength and relative deformation of specimens {revealed} that {strength has} the highest values for \mbox{\highlighting{w/b} = 5} and the lowest for \mbox{\highlighting{w/b} = 7}. In {case} of high water content in soil and wet samples,\linebreak  the condition of a \highlighting{w/b} $\le$ 5 will require a higher amount of binder.}
+
+\keyword{compressive strength; cement; slag; P-wave velocity; elastic body waves; seismic waves; curing; deformation; materials science; \highlighting{engineering} %MDPI: We removed PACS,MSC,JEL information following requirement of journal. Please confirm this revision.
+} 
+
+%\PACS{81.40.Cd; 81.40.Ef; 62.20.Qp; 83.50.Xa; 45.70.Mg; 92.40.Lg; 81.40.Lm; 62.20.M–}
+%\MSC{76Axx; 74Exx; 74Fxx}
+%\JEL{Q00; Q01; Q24; Q55; Q56}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+
+\section{Introduction}
+
+%\subsection{Background}
+
+Many civil engineering and construction projects in harbours face challenges of {the }recycling of dredged marine sediments \cite{LIM2020110869,Lindh202208,Wangetal2022}. Dredging is an essential procedure performed regularly in ports and harbours. It aims to increase water depth in ports to ensure {and control }safe ship transportation. Collected sediments are then deposited and usually employed for industrial purposes as building materials. {The }examples of application of {the }dredged {marine }sediments include manufacture of bricks \cite{HUSSAIN2022100046,SLIMANOU2020101085}, construction of roads~\cite{Wangetal2017} {or} construction of base courses in runways and pavements~\cite{Yoobanpot}. However, collected {raw }marine sediments are unsuitable for direct reuse due to {the }poor engineering properties (low strength, stiffness and compaction, high moisture, and viscosity characteristics of soil), and contamination with toxic pollutants \cite{Calmano1986,Pedersen}. Therefore, recycled soil used for pavements and construction industry needs to be stabilized before reuse, {since during exploitation} it undergoes significant plastic deformations due to the high traffic loads. To withstand such loads{,} it is{ }essential to improve its resilient characteristics, which include elastic and plastic strain responses \cite{Puppala}. In addition, dredged soil should be treated {in order }to improve its ecological properties and to reduce environmental hazards prior to reuse \cite{CROCETTI202220}. 
+
+Since the recycling of dredged marine sediments is of great significance to sustainable development, economic prosperity, societal needs and well-being, many approaches have been developed with the aim of optimization of the soil treatment process in coastal engineering works: reducing {the }costs of works~\cite{SVENSSON202230}, improving the workflow process~\cite{Grubbetal2008}, increasing the effectiveness of stabilization~\cite{YU2021125568,Dermatas}, and immobilization of {the }environmental \mbox{pollutants~\cite{Wangetal2021}.} To solve these problems, many approaches have been developed to optimize soil treatment for reusing it as safe and environmentally-friendly construction \mbox{material~\cite{Calmano1988}.} These include solidification/stabilization (s/s) of soil to increase its strength and workability~\cite{ZHANG2020138551}, removal and immobilization of toxic substances, heavy metals and contaminants through leaching~\cite{SLAMA2021127,Lemenkova202233,ZHANG2021128926,CHI2023131545} and reducing {the }high costs of works related to {the }management and reuse of dredged sediments \cite{Rocha,WANG201869}. 
+
+The {mechanical} behaviour of low performing soils such as dredged sediments can be strengthened with binders. To this end, solidification/stabilization (s/s) {is used }to increase bearing capacity of soil through {the }improved strength, and the results are \mbox{encouraging~\cite{McLeod,Yongfeng,Rashidi,Zhangetal2011}.} A popular approach to s/s soil processing is to use binders as stabilizing agents, and then apply geotechnical methods of evaluating {the soil's} %MDPI: added "the soil's" for clarity; please ensure meaning has been retained
+strength and environmental properties~\cite{Rios,ZHANG2022127996}. Apart from this{, }methods of deep mixing {aim} to improve soft, high moisture {and} cohesive clayey soil, which is typical for marine sediments~\cite{Lindh202232,Ye}. Stabilization of soil with binders requires considering soil properties, which {differ} significantly according to {their} types and structure: fine-grained {clay}, middle-grained {sand} or coarse-grained gravel. In various types of soil, key physio-mechanical parameters differ {substantially}. This includes different mineral content, moisture, density, cohesion and plasticity, swelling potential, volumetric weight and porosity \cite{Grubb,Wangetal2018}. Therefore, {the }s/s treatment {of soil }also requires optimal selection binders, {which should be }adjusted to {specific }soil types {in order to improve} the characteristics of strength, compressibility, and \mbox{bulking \cite{Grubbetal2010}.} 
+
+%\subsection{Literature review}
+The literature abounds with diverse approaches of various {soil }stabilization techniques for improving {soil} properties{. Typically, they} include major binders (cement, slag, fly ash or lime) and their blended mixtures \cite{Nguyen,Couvidat,Puetal2021}. For example, the effects of fly ash content were investigated in stabilized gravel \cite{Nordmark}, clay \cite{Min} and soft soil \cite{Taj}. The use of cement, slag and nanosilica was successfully tested to increase the freezing-thawing durability in soft clays \cite{Eissa}. The benefits of ash-slag cementitious materials were reported for solidification of soft soils \cite{ShuJing}. {Furthermore, the} effects of {the }improved lime-based binders were evaluated{ on} different proportions of slag \cite{Muthukkumaran}, hydrated Portland cement \cite{app11031080,Lindh202226} and ash \cite{Lietal2019} in the admixture content for stabilization of clayey soils. The experimental use of {the }alkali-based materials was reported for improving properties of sandy clay \cite{CORREASILVA2021106260}. {Finally, }various types of cement \cite{Bazne,Lietal2016}, calcined lime/slag blends \cite{Gu} or cement/slag mixtures \cite{Lindh202222} were assessed to analyse the behavior of high-moisture content fine-grained soils after stabilization. 
+
+New mainstream directions in civil and geotechnical engineering include the use of {the }optimized blends of novel and alternative admixtures besides {the }traditional binders used in {civil }engineering \cite{NAGY,Yi,Ismail,Lametal2018}. Sustainable binders can be used for amendment of strength, durability and absorption of native clayey soil and include novel binders used as admixtures{. For instance, these include such novel binders as} polymeric \mbox{materials \cite{geotechnics1020021,Moustafa,LIU2023101044},} pozzolan-blended binders \cite{Consoli}, recycled waste materials \cite{TABASSUM2022100880} or glass powder \cite{Filho}. Such improvements aim at increasing the long-term effects from novel admixtures on soil strength. With this regard, another factor for success in soil stabilization includes a period of treatment \cite{Howard,Romera}. As a general rule, the effects of s/s process increase with curing time, which is reflected in the development of the {physical and }mechanical properties of soil. For instance, existing studies reported a difference in mineralogical evolution, compressive strength, porosity, and pH of {the }s/s soil and cemented materials over curing time, according to the tests taken in key control days \cite{Chrysochoouetal2010,Shrestha}. {Other studies} evaluated{ }the effects of changed quantity and content of binders on the stabilization of soft soils \cite{Oliveiraetal2014,Oliveiraetal2013}
+
+These and many related approaches are based on proposing more efficient binder recipes to improve {the }engineering properties of soil \cite{Khajeh,HUANG2022126702,Hallal}. {Nevertheless,} they still require considering other factors such as the ratio of water with regard to binder content in each test case for {the }analysis of strength. Hence, besides the selection of binder types,{ }effective soil stabilization requires a dosage of suitable binders and the addition of water in balanced proportions with regard to the the structure of soil. Our new formulation of the soil stabilization problem builds on experiments with the water--binder ratio, which affects the hydration process in cementitious materials and is evaluated using seismic methods \cite{Guoetal2021,CHI2021138699}. %MDPI: some changes made in this sentence; please check
+The developed workflow framework is adjusted to sediments collected in the harbour of Port of Oslo as a continuation of our previous work \cite{a16060303}. Here, we employ a series of engineering and environmental tests to evaluate the {engineering }properties {of} soil after stabilization with various \hl{w/b} %MDPI: Please confirm if should be italic as equation. Please confirm whole manuscript.
+ ratio.
+
+Evaluating soil strength after stabilization may be performed using either traditional methods with a UCS testing machine, or using applied geophysical methods. These include the non-destructive ultrasonic tests, which are based on the determination of P-wave velocities and compression characteristics of the{ soil} \cite{Yesiller}. The goal of such methods is to evaluate the increase in cementation of soil through recorded P-wave's velocity, which increases along with densities, stiffness and strength of materials \cite{ZHANG2021143,Lindh2023JMBM,Abdi}. Hence, the acoustic acquisition and calculation of {the }elastic wave velocities serves as an indicator {and descriptor }of success in soil stabilization. As a result, seismic sonic methods have been {used }with great success for evaluation of strength properties of {the }stabilized soil \cite{Lopes,Lindh202210,CRISTELO20151}. 
+
+{Further examples include tested variability of stiffness and damping using analysis of seismic responses} \cite{WANG2022114963} {and evaluation of building structures using tuned mass dampers and frequency evaluation of seismic signals} \cite{WANG2022107298}. The effects of the hydration of cement and cementitious binders, used in materials science to study the evolution of soil hardening have been studied previously \cite{Ardah,Sree,su142113736} and prove the increase of strength and stiffness of stabilized soil. Likewise, the idea of using seismic methods in geotechnical engineering has been used for nondestructive testing for evaluating soil integrity and structural failure based on the relationship between the velocity and the strength and stiffness of \mbox{materials \cite{Yu}.}  
+
+{The effects of varying water--binder ratios on the strength of stabilized soil, which rarely occur in practice, make it challenging to conduct tractable investigations and compare how changes in percentage directly affect the material's properties. %MDPI: changes made in this sentence; please check
+The existing studies mostly use a fixed combinations of binders as stabilizing agents and evaluate the soil properties using a given ratio. In contrast, analysis of various water--binder ratios requires a systematic laboratory-based investigation using a series of tests that include multiple observations of soil behaviour processed further by means of the statistical analysis. To fill this gap, this study proposes a research strategy that involves testing multiple soil samples treated with varying combinations of water-to-binder ratio in a stabilizing mixture.}
+
+%\subsection{Objectives and motivation}
+
+In light of the above discussion, in this paper we study the benefits of exploiting the effects of optimized {and parameterized }binder proportions {taken as factors }and water content on strength and deformation of soil. The optimized workflow is proposed to achieve the most effective procedure and reduce high costs of soil processing in the construction industry. The best combination of stabilizing agents for soil treatment ensures the control of the soil quality for geotechnical suitability of foundations before construction works in a harbour. {Thus, if the conditional ratio of stabilizing agents is known through modelling, then solidification of soil can be achieved by sampling the specimens at a finite number of trials and checking each test to see if the target stabilization degree is achieved. }To this end, we introduce a new method for improving the stabilization efficiency by setting up an updated sampling procedure, which includes four Batches of specimens {stabilized with various amounts of water and a combination of binders}. Thus, we use the activated carbon (powdered charcoal) for pre-treatment of soil materials one month before the stabilization, and apply the Belite Calcium Sulfoaluminate (BCSA) type cement, which has environmental quality compared to the Portland cement due to low \hl{CO}%MDPI: We removed the italics from chemical component. Please confirm this revision whole manuscript.
+$_2$ emissions.\linebreak  The soil pre-treated with these materials demonstrated better environmental characteristics. 
+
+\section{Project Scope and Goals}
+
+The Department of Building Materials at Lund University has been commissioned by the Norconsult to investigate the possibilities of stabilizing/solidifying contaminated dredged masses from Oslo Harbour, Kongshavn. The assignment has been carried out partly at the Building Materials department, partly at the Swedish Geotechnical Institute (SGI). The stabilization/solidification methodology has been used in several projects in Sweden \cite{ZefferSamuelsson,Carling}, including the port of Gävle and the port of Gothenburg (Arendal 2). In both of these projects, a large amount of contaminated dredged material has been stabilized to be used in the construction of the port area. {The Port of Oslo has an important infrastructure; therefore, the safety of the constructions should be ensured with proper and robust stabilization of soil. The soil conditions here are explained by the high moisture of weak expansive soil since samples include the dredged marine sediments that should be stabilized. Compared to other locations, such as remotely located towns and small-sized settlements, the soil in the port region should be stabilized to have a high bearing capacity to bear high loads of intensive transport and intensive traffic. Moreover, the priority and scale of the project is high. Therefore, }the methodology is used both as a pilot test and as a full-scale project with sample points collected in locations shown in Figure \ref{fig01}.
+\begin{figure}[H]
+\begin{adjustwidth}{-\extralength}{0cm}
+\centering
+	\includegraphics[width=14.0 cm]{Fig_01.jpg}
+\end{adjustwidth}
+\caption{\hl{Map} %MDPI: Please provide explanation for yellow triangle.
+ of the Nordic region showing locations of sampling test points for the stabilization/\linebreak solidification projects in Nordic countries: Norway, Sweden and Finland. Map source: Per Lindh. \label{fig01}}
+\end{figure}
+
+Table \ref{tab01} summarizes different projects and reported locations with major sample points where dredged masses or contaminated soil are stabilized/solidified based on the STABCON report \cite{SGI2011} and other sources. For instance, a recent project in Gothenburg (Sweden) includes a pilot trial and a full-scale project, which has been carried out and completed. Furthermore, similar projects have been carried out in Gävle and in other locations in Sweden{ }as well as selected places in Finland and Norway. The mixing tests in all these works aim to investigate the possibility of using binders {in various proportions }to stabilize the contaminated soil material with regard to geotechnical (strength) and environmental (leaching and permeability) properties. The goal is to process soil collected as dredged sediments from {the }coastal areas and to prepare it for further reuse and recycling in {the }industrial and construction works.
+
+%\begin{longtable}{@{\extracolsep{\fill}}p{3.5cm}ccccc@{}}
+\begin{table}[H]
+\tablesize{\footnotesize}
+\caption{\hl{Status} %MDPI: We made alignment into center, please confirm.
+ of the compiled solidification/stabilization (s/s) soil and sediments projects in key locations of Nordic countries, based on STABCON and other sources (as for 2023).} \label{tab01}
+\begin{tabularx}{\textwidth}{m{3cm}<{\centering}CCCC}
+\toprule \textbf{Location} & \textbf{Completed} & \textbf{Ongoing} & \textbf{Permission} & \textbf{Investigation} \\ \midrule 
+
+\bf{\hl{Norway} %MDPI: Please confirm if the bold should be retained.
+} &  &  &  &  \\
+\midrule
+Bærum & \hl{X} %MDPI: Please provide explanation for X.
+ & \hl{--} %MDPI: Please confirm if en dash can be hyphen for `none of information'.
+ & -- & -- \\
+Gilhus & -- & -- & -- & X\\
+Grenland	& -- & -- & -- & X\\
+Bergen & -- & -- & -- & X\\
+Trondheims hamn & X & -- & -- & -- \\
+Hammerfest & X & -- & -- & -- \\
+\midrule
+\bf{\hl{Sweden}} &  &  &  &  \\
+\midrule
+Hammarby sjöstad & X & -- & -- & -- \\
+Västra Kungsholmen & X & -- & -- & -- \\
+Oxelösunds hamn & --  & -- & X & -- \\
+Västervik/Örserum & X & -- & -- & -- \\
+Oskarshamn & -- & -- & -- & X \\
+Falkenbergs hamn  & -- & -- & -- & X \\
+Göteborgs hamn & X & -- & -- & -- \\
+Gävle hamn & X & -- & -- & -- \\
+Örnsköldsviks hamn & -- & -- & -- & X \\
+Valdemarsvik & -- & -- & X & -- \\
+Köping & -- & X & -- & -- \\
+Västerås & -- & X & -- & -- \\
+Helsingborg & X & -- & -- & -- \\
+Malmö & X & -- & -- & -- \\
+Norra Djurgårdsstaden & -- & -- & -- & X \\
+Luleå hamn & -- & -- & -- & X \\
+Sundsvall, Östrand & -- & -- & -- & X \\
+\midrule
+\bf{\hl{Finland}}  &  &  &  &  \\
+\midrule
+Sörnäs strand & X & -- & -- & -- \\
+Hamina hamn & X & -- & -- & -- \\
+Fredrikshamn & X & -- & -- & -- \\
+Mariehamn & X & -- & -- & -- \\
+Åbo hamn & X & -- & -- & -- \\
+Kokkola hamn & -- & -- & X & -- \\
+\bottomrule
+\end{tabularx}
+\end{table}
+%\end{longtable}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Materials and Methods}
+
+Soil samples {evaluated in this study }were collected as dredged sediments from {the }Port of Oslo, Norway. The tests points are located in {the }Kongshavn harbour and marked No. \hl{1\_2,} %MDPI: Please confirm if this should be 1, 2 and use en dash for  number 1-6. Please confirm whole manuscript.
+ 3, 4, 5, 6 and 8. {The }geotechnical and chemical analyses of the dredged masses were carried out {with the aim }of determining the strength parameters {of the soil }and the degree of contamination. The analyses were conducted by {the }Eurofins in Norway. In these tests, {soil} samples from the test points 3 and 4 were combined while others {were }evaluated separately.
+
+\subsection{Determination of Material Parameters}
+
+Before soil stabilization and environmental tests, the soil specimens were examined for major characteristics: (1) water content, (2) density, and (3) grain size analysis. The tests were performed using methods and standard equipment available in {the }laboratory of SGI, such as hydrometer and sieve analysis. 
+
+\subsubsection{Water Content and Density}
+
+Figure \ref{fig02} shows the water content in each tested sample point. The current water ratio for each sample point is represented on {the }X-axis. For each sample point, eight determinations were made and visualized on {the }Y-axis. The sample point No. 5 with the highest water ratio shows the highest dispersion, which is natural and expected, as high water ratios give the fastest separation in soil material. Samples are coloured differently to distinguish specimens. General statistical information such as means, standard deviation, maximal and minimal values are recorded and {visualized} in the graphs. Curved lines indicate the histograms of data distribution, {which show} water content in soil samples received from the dredged sediments. In connection with the determination of the water ratio, the evaluation of the bulk density of various {soil} samples was also carried out {based on the collected dredged~sediments}. 
+\vspace{-6pt}
+\begin{figure}[H]
+\includegraphics[width=12.0 cm]{Fig_02.jpg}
+\caption{\hl{Water} %MDPI: Pelase confirm if the asterisk indicates multiply sign in ''10v*10c'', if not add explanation for it.
+ content in each sample point. \label{fig02}}
+\end{figure}
+
+Figure \ref{fig03} shows the{ }graph of {soil }density {based on the analysis }of the dredged masses (X-axis), where sample point 5 has the lowest bulk density. Such results {show that }water percentage is the highest in this type of soil. Overall, the bulk density in the examined {soil }specimens {varied} from 1.3 to 1.9 \hl{g/cm}%MDPI: We removed the italics from unit. Please confirm this revision whole manuscript.
+$^3$. The observed three peaks are in the ranges from 1.34 to 1.44, then from 1.5 to 1.6 and---a more dispersed interval---from 1.6 to 1.9. Such values are typical for fine-grained sandy clays constituting marine sediments {around Oslo}.
+
+{The variations of density by observations evaluated using tests estimating water percentage is shown in Figure} \ref{fig03}. {Here, the assumption tested by the experiments is first, that the development of density in cement-slag-stabilized sediments is related to the water moisture, and second, that using this soil--water relationship, one can model the complete process starting from the early reactions of soil hardening and the development of the stabilization reaction until the main hydration peak with changed density of the evaluated sediment soil samples. Besides, this involves the effects from various locations of samples and different \hl{w/b} ratios that contribute to the differences in density of the tested soil specimen. In all eight of these experiments, the maximum density of soil samples was recorded as 1.9 g/cm$^3$. This density was found to yield the best results in terms of soil structure when a \hl{w/b} ratio of 5.2 was reached at the optimal water content, as shown in Figure \ref{fig03}. %MDPI: changes made; please check
+
+\subsubsection{Grain Distribution}
+
+The dominating soil type in the collected samples of {the }dredged sediment shows mostly silts with a very fine grain distribution, see Figure \ref{figA1}. Figure \ref{fig04} shows grain distribution in a batch of {the }dredged material, which was transported to {the }SGI for soil particle size analysis to analyze grain distribution. The additional results of this analysis are reported as graphs of grain distribution in Figure \ref{figA1}.
+\begin{figure}[H]
+%\begin{adjustwidth}{-\extralength}{0cm}
+%\centering
+	\includegraphics[width=12.0 cm]{Fig_03.jpg}
+%\end{adjustwidth}
+\caption{\hl{Density} %MDPI: 1. Pelase confirm if the asterisk indicates multiply sign in ''10v*10c'', if not add explanation for it. 2. We moved figure 3 to here for reduced empty space. Please confirm.
+ of soil specimens. \label{fig03}}
+\end{figure}
+\vspace{-9pt}
+\begin{figure}[H]
+%\begin{adjustwidth}{-\extralength}{0cm}
+%\centering
+	\includegraphics[width=12.0 cm]{Fig_04.jpg}
+%\end{adjustwidth}
+\caption{Grain distribution in the different samples. Samples \hl{1\_2,} %MDPI: Please confirm if this should be 1,2 and use en dash for range number 1-4. Please confirm whole manuscript.
+ 3 and 4 contain more clay compared to samples 5, 6 and 8. Sample 8 contains the least fine soil. \label{fig04}}
+\end{figure}
+
+Grain distribution in specimens were compared for several test points collected in Sweden and other Nordic countries where several projects with s/s have been implemented, Figure \ref{fig01}. Regarding the composition of the collected dredged soil sediments, {soil} samples collected from {the }Port of Oslo contain more clay compared to those from Arendal, Figure~\ref{fig05}. This also compares {the }data from Oslo, Gothenburg and Östrand in Sundsvall. 
+\begin{figure}[H]
+%\begin{adjustwidth}{-\extralength}{0cm}
+%\centering
+	\includegraphics[width=12.0 cm]{Fig_05.jpg}
+%\end{adjustwidth}
+\caption{\hl{Grain} %MDPI: 1. Please provide explanation for black line with black cross sign. 2. The 2nd explanation in figure (Red line+black plus sign), please confirm if should be add the line in picture, we are not able to find it
+ distribution for sediments collected in Oslo (Norway) and Gothenburg (Sweden). \label{fig05}}
+\end{figure}
+
+%----------- subsection ----------->
+\subsection{Soil Homogenization and Selection of Binders}
+
+The selection of binders used for stabilization of soil was adjusted according to our previous studies and several similar projects in Sweden. In mixing tests, a binder ratio~of~30\% CEM I (SS-EN 197-1) \cite{SIS2011} and 70\% slag (SS-EN 15167-1) \cite{SIS2006} was selected as{ }the most effective combination {of binders }and homogenized with soil using {the }KitchenAid eccentric mixer. After mixing, the soil samples were placed in {the }sampling sleeves, Figure \ref{fig06}.\linebreak  Before mixing binders into the dredged sediment masses, each specimen was homogenized for at least five minutes using a mixer. Normally, in large-scale projects, a Hobart mixer is used for large quantities of mortar or dredged soil material \cite{OLIVEIRA2019103110,RAMIREZ2023100920,Asi}. However, in this case, because the experiments were performed on a small-scale level, the volumes {of soil }were too small to use a Hobart mixer. {The mixing on a large scale can be performed using a Hobart mixer, which yields practically the same results. In this case, the functionality of the device is solely dependent on the volume of soil, and the mixing process itself produces identical outcomes. Consequently, the use of the smaller device was only adapted for the small portion of the materials tested. This practice is acceptable in the SGI laboratory for small-scale experiments where parts of the soil are tested.} Hence, the {mixing} procedure was performed using the KitchenAid type eccentric mixer, see Figure \ref{fig06}a. %MDPI: some changes made here; please check
+
+
+Clayey soil masses and binders were mixed for {five} minutes to obtain a good homogeneity. As a form of manufacturing the test {soil samples}, the piston sampling sleeves were used, according to Swedish practice, see Figure \ref{fig06}b showing a standard sampling sleeve. The sleeve has a diameter of approximately 50 mm and a height of 170 mm.\linebreak  The sleeve in the photo is fitted with a lower cover. During the fabrication of the samples, the stabilized dredge masses were placed in the sleeves in several layers. Between each new layer, the sleeves were tapped several times {on a table }to expel any air that may be trapped in the sleeve during {the }filling {procedure}. After the fabrication of the test samples, the sleeves were placed into a water bath, i.e., stored under water. 
+
+On the fourteenth day, the specimens were de-moulded. After {the }de-moulding, the samples were trimmed to a length of 100 mm. This means that the samples have a slenderness factor~of~2, {which implies that soil} samples {had} a height corresponding to twice the diameter. This is according to Swedish standard practice and means that ordinary geotechnical testing can be carried out without the conversion factors. After homogenization, a certain amount of dredged material and binder was weighed. To calculate the amount of binder, the {content of }water of the dredged material was calculated based on the water ratio and density of the dredged material, see Table \ref{tab02}.
+
+The tests were implemented using various concentrations of water in a mixture of sediments collected from the Port of Oslo with respect to the amount of binder and\linebreak  water/binder ratio (\hl{w/b}). The selection of the most optimal \hl{w/b} value was argued based on the previous research performed in Arendal 2 and Gothenburg (southern Sweden) \cite{Lemenkova202139}. During the {soil-}testing procedure, the experiments were carried out with w/b of \hl{5--7} %MDPI: We used endash for range number, please confirm.
+ of the dredged materials, where the lowest level corresponds to the highest amount of binder in relation to the amount of water in the dredged materials, i.e., ``high binder--low water'' $H_BL_W$. Accordingly, the highest level of \hl{w/b} {ratio }indicates the highest percentage of water and the lowest amount of binder. The \hl{w/b} ratio in fabricated specimens is reported in Table~\ref{tab02}. Here, the data include density of soil samples, and water/binder amounts indicating the percentage of {the }added binder to the mixture. 
+\begin{figure}[H]
+\makebox[1.0\linewidth][r]{%
+	\begin{subfigure}[b]{.45\textwidth}
+	%	\centering
+			\hspace{5pt}\includegraphics[width=5.4cm]{Fig_06a.jpg}
+		\captionsetup{position=bottom,justification=centering}\caption{}
+	\end{subfigure} %\hspace{-1mm}
+	\begin{subfigure}[b]{.55\textwidth}
+	%	\centering
+			\includegraphics[width=7.5cm]{Fig_06b.jpg}
+		\captionsetup{position=bottom,justification=centering}\caption{}
+	\end{subfigure}%
+}
+\vspace{-5pt}
+\caption{(\textbf{a}): A KitchenAid eccentric mixer used for homogenization of the soil specimens. Photo: Per Lindh; (\textbf{b}): A standard sampling sleeve used for sampling soil specimens. Photo: Per Lindh.}\label{fig06}
+\end{figure}
+\vspace{-9pt}
+\begin{table}[H] 
+%\begin{threeparttable}
+\caption{Calculation of binder admixture, performed in the SGI laboratory.\label{tab02}}
+%\newcolumntype{C}{>{\centering\arraybackslash}X}
+\begin{tabularx}{\textwidth}{CCCCCCCCCC}
+\toprule
+\textbf{ID} & \textbf{\hl{w} %MDPI: Please confirm if should be italic as equation.
+} & \boldmath{$\gamma$} & \boldmath{$m_t$} & \boldmath{$m_s$} & \boldmath{$m_w$} & \textbf{\hl{w/b} %MDPI: Please confirm if should be italic as equation. Please confirm whole manuscript.
+} & \boldmath{$m_b$} & \boldmath{$m_{cement}$} & \boldmath{$m_{slag}$} \\
+\midrule
+\hl{1\_2} %MDPI: 
+ & 72.6 & 1.54 & 2.5 & 1.448 & 1.052 & 5 & 0.210 & 0.063 & 0.147\\
+\hl{1\_2} %MDPI: 
+ & 72.6 & 1.54 & 2.5 & 1.448 & 1.052 & 6 & 0.175 & 0.053 & 0.123\\
+\hl{1\_2} %MDPI: 
+ & 72.6 & 1.54 & 2.5 & 1.448 & 1.052 & 7 & 0.150 & 0.045 & 0.105\\
+3 & 74.74 & 1.57 & 2.5 & 1.431 & 1.069 & 5 & 0.214 & 0.064 & 0.150\\
+3 & 74.74 & 1.57 & 2.5 & 1.431 & 1.069 & 6 & 0.178 & 0.053 & 0.125\\
+3 & 74.74 & 1.57 & 2.5 & 1.431 & 1.069 & 7 & 0.153 & 0.046 & 0.107\\
+4 & 104 & 1.42 & 1.0 & 0.490 & 0.510 & 5 & 0.102 & 0.031 & 0.071\\
+4 & 104 & 1.42 & 1.0 & 0.490 & 0.510 & 6 & 0.085 & 0.025 & 0.059\\
+6 & 50 & 1.72 & 2.5 & 1.667 & 0.833 & 5 & 0.167 & 0.050 & 0.117\\
+6 & 50 & 1.72 & 2.5 & 1.667 & 0.833 & 6 & 0.139 & 0.042 & 0.097\\
+8 & 54 & 1.68 & 2.5 & 1.623 & 0.877 & 5 & 0.175 & 0.053 & 0.123\\
+8 & 54 & 1.68 & 2.5 & 1.623 & 0.877 & 6 & 0.146 & 0.044 & 0.102\\
+\bottomrule
+\end{tabularx}
+\footnotesize{\emph{\hl{Notations} %MDPI: Please confirm if the italics should be retained.
+ in \hl{Table} %MDPI: Please confirm if this sentence ''Notations in Table 2 and comments for abbreviations'' can be removed directly
+ \ref{tab02} and comments for abbreviations}: \hl{ID---sample number;} %MDPI: We made table footer note into 1 paragraph and removed list item. Please confirm this revision.
+ 	 w---water ratio, \%; 
+	 $\gamma$---density of soil ($\gamma_{dredged}$), $\frac{ton}{m^3}$; 
+	 $m_t$, kg; 
+	 $m_s$ = $\frac{m_t}{1+w}$; 
+	 $m_w$ = $m_t - m_s$ (kg);
+	 \hl{w/b} is defined as a ratio of water/binder indicating the amount of binder;
+	 $m_b$ is a $m_{binder}$ = $\frac{m_w}{w/b}$;
+	 $m_{cement} = {m_b}\times 0.3$;
+	 $m_{slag} = {m_b}\times 0.7$;
+	 The computed values are given for $m_t$ kg of dredged soil material.}
+%\begin{tablenotes}
+%      %\small
+%      	\item \emph{Notations in Table 2 and comments for abbreviations}: ID -- sample number; 
+%	\item w -- water ratio, \%; 
+%	\item $\gamma$ -- density of soil ($\gamma_{dredged}$), $\frac{ton}{m^3}$; 
+%	\item $m_t$, kg; 
+%	\item $m_s$ = $\frac{m_t}{1+w}$; 
+%	\item $m_w$ = $m_t - m_s$ (kg);
+%	\item w/b is defined as a ratio of water/binder indicating the amount of binder;
+%	\item $m_b$ is a $m_{binder}$ = $\frac{m_w}{w/b}$;
+%	\item $m_{cement} = {m_b}\times 0.3$;
+%	\item $m_{slag} = {m_b}\times 0.7$;
+%	\item The computed values are given for $m_t$ kg of dredged soil material.
+%    \end{tablenotes}
+%  \end{threeparttable}
+\end{table}
+
+The ratio of water to binder is recorded separately for slag {and} cement{, }and computed using formulae provided in notations for Table~\ref{tab02}. Because the compressive strength and {the }UCS behavior of {the }stabilised sediments can change {significantly} over time{ }under different combinations of binders{ }and water/binder proportions, more than one test should be used{. Hence, a series of such tests provides} sufficient information, {which is} necessary for characterizing the potential stiffness and strength behavior of soil. Therefore,~we~used {several dozens of }samples of soil collected in several test {sites} (TS){. These }specimens {were }stabilized using various \hl{w/b} percentages to {analyze} soil performance with changed conditions. {Specifically, }a total of 70 test samples were fabricated, each with a varied \hl{w/b} ratio, using soil samples collected from the Port of Oslo. 
+
+For \hl{w/b} ratios equal to 5 and 6, five specimens were fabricated for each sample test point. {Of these, }three specimens were used for testing strength and seismic measurements, one {was used }for permeability tests and one specimen was kept in reserve. Such reserve specimens were also used in some cases, when some specimens were damaged during {the }de-moulding. For two sample points (Sample No. \hl{1\_2} and Sample No. 3), samples were also produced with \hl{w/b} = 7 to check the robustness and reliability of the recipe. 
+
+%----------- subsection ----------->
+\subsection{Seismic Measurements}
+
+Seismic measurements on the samples were carried out using special equipment, which measures the natural frequency of the samples. In this study, we used the Integrated Circuit-Piezoelectric (ICP) Accelerometer {developed }by the PicoCoulomB (PCB) Piezotronics Group Inc. These tests were conducted at the Swedish Geotechnical Institute (SGI) using a pair of vibration source-receivers equipped with the ICP Accelerometer. These instruments indicated changes in pulse velocity, which correspond to the stiffening of the stabilized soil resulting from the reactions between the cementitious binders, water, and soil—a chemical process. Based on the elastic wave frequency, the compression wave velocity (VP) of the samples, also known as P-wave velocity, was calculated. The P-wave velocity is linked to the material's modulus of elasticity \hl{(\emph{E})} %MDPI: Please confirm if the italics should be retained.
+ and enables the evaluation of soil strength gained during stabilization. 
+
+{Existing examples of seismic testing devices include the piezoelectric transducers used in similar studies} \cite{DUTTA20201269,Astuto,Brignoli}. {
+The seismic testing devices are capable of measuring the velocity of seismic waves that travel through the soil sample. This velocity varies with material composition and stiffness, making it a valuable descriptor of soil properties. There are numerous categories of transducers with different setting parameters and functionalities for measuring seismic refraction by estimating the travel time of the seismic body waves.
+
+These devices find applications in evaluating the nature and depth of the subsurface, which can be computed using the data on the velocity of P-waves in the soil layers. An example of such transducers includes disk-shaped piezo-ceramic transducers.}  Refs. \cite{SUWAL2013510,Irfan}, {accelerometers transmitting the signals and sensors receiving the data} \cite{SHABANI2023116589,2002121}, {and resonant column testing, which may be used in the two modes: either fixed-free or free-free boundary conditions} \cite{Drnevich}. 
+
+{Of these, the most widely used approach is the resonant column testing applied in this study, and with many examples of applications for seismic testing in cementitious materials} \cite{LI2023108081,UMUTUMU2023101415,LIU2020104620,KANELLOPOULOS2022107366}. {Hence. in} this case, the resonance frequency of P-waves was measured at different time periods to evaluate the development of the strength in the specimen and changes in its dynamics with time, which indicates the increase in stiffness and density of soil specimens. 
+The equipment for measuring P-wave velocity was readily available at SGI, and the methods used followed a process of seismic measurements to evaluate the P-wave velocity of the specimens. This process was conducted in accordance with the existing workflow scheme \cite{Lindh202224}. 
+
+%----------- subsection ----------->
+\subsection{Compressive Strength Measurements}
+
+After {the }trimming of {soil }specimens and measuring their resonance frequency,\linebreak  the {samples} were placed into the plastic bags. To ensure {the }high humidity in the plastic bags, a piece of {the }moistened paper was placed in each plastic bag. After {the }curing {procedure}, {soil} samples were pressed to failure in a 100 kN pressure press of the brand MTS{. The instrument is shown in }Figure \ref{fig07}, {which shows }the MTS 810 servohydraulic universal testing machine used for test compressing the specimens. 
+
+{Since the first servohydraulic universal testing machine designed for soil testing, the instrument was constantly improved, which resulted in a variety of existing and modified instrument devices and apparatuses. Current advances in technical progress and rapid development of scientific instruments of soil testing in the 20th century resulted in various types of adjusted modifications of UCS testing machines with enhanced properties and improved functionality. The machines %MDPI: pluralized "machine"
+used for testing soil in this study included the MTS 810 servohydraulic universal testing machine available in the Swedish Geotechnical Institute. It has the advantages of maximum force capacity of 10 t 
+ in both compression and tension, making it suitable for testing the compressive strength of the specimens. The MTS 810 servohydraulic universal testing machine represents an advanced technique for evaluating real-time soil strength dynamics during compressive tests of soil stabilized with binder materials, as shown in Figure \ref{fig07}. %MDPI: changes made in this paragraph; please check
+\begin{figure}[H]
+%\begin{adjustwidth}{-\extralength}{0cm}
+%\centering
+\hspace{2pt}\includegraphics[width=10.0 cm]{Fig_07.jpg}
+%\end{adjustwidth}
+\caption{MTS 810 servohydraulic universal testing machine with maximum force capacity of {10 t} in compression/tension used for test compressive strength of the specimens. Photo: Per Lindh. \label{fig07}}
+\end{figure}
+
+The loading rate was 1\% of the height of the specimen per minute, i.e., 1.0 mm/min, which is in accordance with the standard SS-EN 16907-4 \cite{SIS2018}. However, it should be mentioned that the Swedish Geotechnical Institute (SGI) uses {a standard of }1.2 mm/min, {which corresponds to the technical characteristics} adjusted to the local needs. {Nevertheless}, this small difference has no significance for the determination of the {compressive }strength of the soil material. With regard to these tests, {the }additional experiments were also carried out using {the} calorimeters to assess different reactions from \hl{w/b} and then evaluating the P-wave velocities {passing through} soil samples.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Results {and Discussion}}
+
+The results from the laboratory-based tests both at LTH and at SGI show that dredged sediment masses are well suited to be stabilized/solidified with an inorganic binder consisting of 30\% cement type CEM I (according to CEN 197-1) and 70\% ground granulated blast-furnace slag (GGBFS) according to EN 15167-1 \cite{SIS2006}. The first requirement for the amount of binder should be at least 120 kg/m$^3$. A secondary condition is that the weight ratio between the weight of water contained in a mixture and the weight of the added binder should be $\leq$5. Besides, it should be pointed out that in the case of high water{ percentage }in the original dredged masses, such as marine sediments with high percentage of water, the secondary condition will be a \hl{w/b} $\leq$ 5 result in a higher amount of binder.
+
+%----------- subsection ----------->
+\subsection{Binder Content Related to Strength}
+Figure \ref{fig08} shows a graph, which illustrates variation in the values of compressive strength with different proportions between cement and slag where the effects from binders are clearly visible. Here, the mechanical properties of soil were evaluated against the development of UCS in two ways: first, as a function of stabilization by cement (as it is common in ordinary cement measurements, dark blue coloured), and second, as a function of stabilization with slag (i.e., soil strength measured for a selected soil sample stabilized with slag, brown colour in Figure \ref{fig08}). These tests were carried out on {the }dredged masses {collected }from {the }Arendal 2 in Gothenburg. In the tests, the total amount of binder {remains} the same {while} the ratio between cement and slag {varies} from 0\% slag to 90\% slag. Samples with 70\% slag give the highest compressive strength. {Black} dots represent the results from the tests on {the }Uniaxial Compressive Strength {(UCS)}. Strength development in soil stabilized with varying combinations of cement and slag {was evaluated. %MDPI: changed word order here
+The}  best {combination of binders was detected to control their effects }on strength development, {which is} obtained at a slag admixture of 70\% of the total amount of binder, Figure \ref{fig08}. {In this way,} the highest content of binders with the maximal achieved strength in soil samples can be~evaluated.
+\vspace{-7pt}
+\begin{figure}[H]
+%\centering
+	\hspace{1pt}\includegraphics[width=13.0 cm]{Fig_08.jpg}
+\caption{\hl{Variation} %MDPI: 1. Please change the hyphen (-) into minus sign ($-$, "U+2212"). e.g., "-1" should be "$-$1". 2. Please check if an explanation should be added for black dot. 3.We removed extra space in figure file, please confirm this revision.
+ of compressive strength with different proportions between cement and slag. \label{fig08}}
+\end{figure}
+
+The results of the evaluation of geotechnical{ }properties {of soil }are based on the performed resonance frequency measurement and tests of{ }UCS. As the resonance frequency measurements are non-destructive, the same specimens were measured on several occasions and the development of the P-wave velocity over time {was} followed, see \mbox{Figure \ref{fig09}.} Here, the graph shows a correlation {of }P-wave velocity in relation to {the }curing age of the soil. {More specifically,  the variation of P-wave velocity with different soil samples collected in various test sites and stabilized with cement and slag shows that there is a good linear correlation between the curing time and the mechanical properties of soil indicating a general gain in strength over time of curing, which is reflected in increased velocity of P-waves. }The points separating the lines into {the }segments {shown }in the image represent measurements of soil{. These} samples {were }taken and {measured over a control period of }time to evaluate the dynamics of P-waves, {which indicates} gain in strength {on a} trend line.\linebreak  The samples here were stored at 20 °C. The blue points correspond to the \hl{w/b} = 5, green points correspond to \hl{w/b} = 6{, }and red points correspond to \hl{w/b} = 7{, respectively}. Different points give different growth, which can depend on both grain distribution {in individual soil samples, }and {the }impurity {of }content{, }Figure \ref{fig09}. {The results are comparable for different samples plotted per one gram of binder. This indicates that a significantly earlier time can be used to predict, for example, the 50th day of strength.} 
+\begin{figure}[H]
+	\includegraphics[width=13.0 cm]{Fig_09.jpg}
+\caption{\hl{Development} %MDPI: Please check if an explanation should be added for different color lines.
+ of P-wave velocity with curing time for sediment samples stabilized with various water/binder (\hl{w/b}) ratios. \label{fig09}}
+\end{figure}
+
+{In the curves of Figure} \ref{fig09}, {we noted an almost linear correlation between the curing time and the increase in speed (i.e., sound velocity) and the frequency of measured P-waves passing the soil samples, which indicates the improvement of the mechanical parameters of soil, such as elastic (Young's) modulus, and indicates a gain in soil strength over the period of curing. Moreover, one can conclude from the analysis of Figure} \ref{fig09} {that for a selected binder blend (\hl{w/b} \hl{5--7} %MDPI: We used endash for this information. Please confirm. comment also applies to highlights below.
+ for different test sites; see the legend in upper right corner of Figure} \ref{fig09}). {Stiffness and strength development (which corresponds to the E modulus) is approximately linearly related to the curing period, and is also well correlated with the values of P-wave, their sound velocity and frequency.}
+
+{Table} \ref{tab03} {summarizes the data on the measured samples and the results of the compressive strength (UCS, kPa) using mechanical tests with varied \hl{w/b} ratios. More specifically, Table} \ref{tab03} shows the values of the compressive strength {according to the different} \hl{w/b} {ratios }for specimens collected in various test sites (TS). {The measurements of the UCS correspond to the columns 3, 6 and 9 in Table} \ref{tab03}). {The} UCS tests were carried out according to the existing Swedish standard SS-EN 16907-4 \cite{SIS2018} with recommended deformation rate \mbox{of 1 mm/min} for soil specimens with a height of 100 mm. The results are summarized in Table \ref{tab03}. For the point $1\_2$, the \hl{w/b} = \hl{5--7} were tested for each specimen. As the ratio between water and binder controls the strength, samples with \hl{w/b} = 5 had higher strength compared to {the }samples with \hl{w/b} = 6 or 7, which proved the expected results. 
+
+The specimens within the same \hl{w/b}, for instance, ID No. $1\_1$ to $1\_4$, show smaller variation in strength values. The same applies to the other \hl{w/b} ratios. Test samples No.~1\_1 and test body $1\_2$, however, show a different stiffness compared to other samples. Such{ }variation in stiffness is normal and is explained by{ }natural individual parameters of {the }soil masses. The results of the tests on the compressive strength and water/binder ratio for specimens collected from the sampling point No. 3 are also shown in the same {dataset, }Table \ref{tab03}. Specimen $4\_4$ from TS 4 obtained a significantly higher strength compared to{ }others with the same \hl{w/b} and should therefore be considered as an outlier.
+\begin{table}[H] 
+\caption{\hl{Compressive} %MDPI: We removed vertical line. Please confirm.
+ strength (kPa) measured by UCS tests with relation to the water/binder ratio (\hl{w/b}) for specimens collected in sample test sites (TS) No. \hl{1\_2, 3 and 4.} %MDPI: Please confirm if should use en dash for range numbers, 1-4.
+\label{tab03}}
+\begin{tabularx}{\textwidth}{CCCCCCCCC}
+\toprule
+\textbf{TS 1\_2} & \textbf{\hl{w/b}} & \textbf{UCS} & \textbf{TS 3} & \textbf{\hl{w/b}} & \textbf{UCS} & \textbf{TS 4} & \textbf{\hl{w/b}} & \textbf{UCS}\\
+\midrule
+$1\_1$ & 5 & 829 & $3\_1$ & 5 & 700 & $4\_2$ & 5 & 740 \\
+$1\_2$ & 5 & 833 & $3\_2$ & 5 & 822 & $4\_3$ & 5 & 796 \\
+$1\_3$ & 5 & 853 & $3\_3$ & 5 & 829 & $4\_4$ & 5 & 1237 \\
+$1\_4$ & 5 & 859 & $3\_6$ & 6 & 298 & $4\_6$ & 6 & 373 \\
+$1\_6$ & 6 & 529 & $3\_7$ & 6 & 304 & $4\_7$ & 6 & 439 \\
+$1\_7$ & 6 & 569 & $3\_8$ & 6 & 318 & $4\_8$ & 6 & 512 \\
+$1\_8$ & 6 & 597 & $3\_9$ & 6 & 295 & -- & -- & -- \\
+$1\_11$ & 7 & 297 & $3\_11$ & 7 & 162 & -- & -- & -- \\
+$1\_12$ & 7 & 272 & $3\_12$ & 7 & 148 & -- & -- & -- \\
+$1\_13$ & 7 & 298 & $3\_13$ & 7 & 133 & -- & -- & -- \\
+\hl{--} %MDPI: Please confirm if should be normal hyphen.
+ & -- & -- & $3\_14$ & 7 & 150 & -- & -- & -- \\
+\bottomrule
+\end{tabularx}
+\end{table}
+ 
+%----------- subsection ----------->
+\subsection{Water--Binder Ratio}
+Table \ref{tab04} shows the compressive strength with relation to the effects of changed water/binder ratio (\hl{w/b}) for the test points No. 5, 6 and 8, and additionally, the P-wave velocity for test site 5. {Here, soil stabilized by the blended cement-slag mixtures and water added in various proportions into the mixture indicates good performance in stabilization. This is achieved due to balanced \hl{w/b} proportions. This combination outperforms that of soil treated by cement-only binders. }With regard to the obtained results of the UCS tests, P-wave measurements were performed to analyze {the }correlation of the P-wave velocity {against the} compressive strength in {evaluated }soil samples. Therefore, after testing {the }P-wave velocity, the values of the compressive strength were calculated based on the recorded data on the speed of waves, which correlate with the strength of the materials. These results are reported in Table \ref{tab04}. 
+\begin{table}[H] 
+\caption{\hl{Compressive} %MDPI: We removed vertical line. Please confirm.
+ strength (kPa) measured by UCS tests with regard to water/binder ratio (\hl{w/b}) for samples collected in test sites (TS) No. 5, 6 and 8, and P-wave velocity (m/s) for TS 5.\label{tab04}}
+\begin{tabularx}{\textwidth}{CCCCCCCCCC}
+\toprule
+\textbf{TS 5} & \textbf{\hl{w/b}} & \textbf{\hl{P-w} %MDPI: Please confirm if should be ``P-wave''.
+} & \textbf{UCS} & \textbf{TS 6} & \textbf{\hl{w/b}} & \textbf{UCS} & \textbf{TS 8} & \textbf{\hl{w/b}} & \textbf{UCS}\\
+\midrule
+$5\_1$ & 5 & 1161 & 539 & $6\_1$ & 5 & 993 & $8\_1$ & 5 & 1222 \\
+$5\_2$ & 5 & 1160 & 538 & $6\_2$ & 5 & 985 & $8\_2$ & 5 & 1081 \\
+$5\_3$ & 5 & 1154 & 532 & $6\_3$ & 5 & 987 & $8\_3$ & 5 & 991 \\
+$5\_6$ & 6 & 871 & 303 & $6\_6$ & 6 & 688 & $8\_6$ & 6 & 584 \\
+$5\_7$ & 6 & 873 & 304 & $6\_7$ & 6 & 697 & $8\_7$ & 6 & 453 \\
+$5\_8$ & 6 & 873 & 304 & $6\_8$ & 6 & 618 & $8\_8$ & 6 & 633 \\
+\bottomrule
+\end{tabularx}
+\end{table}
+%----------- subsection ----------->
+\subsection{Soil Deformation}
+
+Figure \ref{fig10} shows a graph of correlation between the pressure (kPa) and relative\linebreak  deformation of the {soil specimens collected} from {the }sample tests site point \hl{No.} %MDPI: We removed the italics. Please confirm this revision.
+1\_2.\linebreak  The values of {the }compressive strength were categorized as different lines recorded by {the }measurements of specimens{. Overall, the }values of {the }compression did not exceed 900 kPa. Originally recorded by the UCS device, the data were modelled {and evaluated statistically using the} Statistica software. {The effectiveness of the UCS tests is ensured by the high precision measurements and force capacity in the MTS 810 testing machine, which operates for various temperature and soil conditions. The stability precision ensures a wide total range of UCS values, since this MTS 810 machine measures soil strength at a high level of precision. The MTS machine was used for a complete period of testing, i.e., over 60 days, as in case of this study (2 months), which enabled us to analyze the dynamics of gain in strength. }
+
+The segments of lines are separated by measured strength values, appearing as fragments on the general trend lines, which depict the dynamics in relative deformation individually for various soil specimens. In contrast to the soil samples from test sites 1 to 8, the use of blended mixtures with different ratios of water/binder in cement/slag blends in tests 11--13 demonstrates more stable results of compression and strength gain. After achieving the peak compression, the deformation values stabilize at approximately 2\% of the values in soil samples compared to the original raw materials.} %MDPI: some changes made in this paragraph
+
+\vspace{-3pt}
+\begin{figure}[H]
+%\centering
+	\hspace{1pt}\includegraphics[width=13.0 cm]{Fig_10.jpg}
+\caption{Correlation between compression (kPa) and relative deformation of 10 specimens collected from the sample test site No. \hl{1\_2.} \label{fig10}}
+\end{figure}
+
+The increase in relative deformation continues rapidly until {the values of the }compression strength {reach} 800 kPa, after which they stabilize and then decrease. Possible distortions and noise on the samples 11 to 13 are identified and classified as unstable responses to {the content of }the binder by {the }selected {soil }samples, since these {specimens }were compressed with relatively low strength {that} does not exceed 300 kPa. Samples 1 to 8 demonstrate {a} stable dynamics in measurements. In all cases, the relative deformation was measured until a value of 2.2\%. {The comparison of the plots for soil samples collected in test sites (TS) from 1 to 13 suggests the direct effects from the water/binder ratio on the hydration of cement that leads to the gain in strength (UCS). Such findings are necessary to account for the identification of the best combinations of binders and \hl{w/b} ratio, while optimizing binder blends and selecting the proportions of water in recipes.} %MDPI: some changes made in this paragraph
+
+Figure \ref{fig11}{ shows} a graph of {the }pressure-deformation relationship for {soil }samples collected from the test point No. 3 with three different levels of \hl{w/b}, {which }are clearly visible in the graph. Randomly coloured line traces indicate selected sample specimens tested for {evaluation of soil }deformation{. }The first number in the numbering is the test point, in this case point No. 1\_2. The second number is a serial number. Samples 1 to 4 have \hl{w/b} = 5, samples 6 to 8 have \hl{w/b} = 6 and samples 11 to 13 have \hl{w/b} = 7. {The }variations in strength prove the expected results with the highest values for \hl{w/b} = 5 and the lowest strength for \hl{w/b} = 7{, respectively}. 
+
+{As the curves in specimens 11 to 14 are almost identical with regard to the development of relative deformation and do not exceed 200 kPa in maximal values, this indicates that the measurement of UCS tests will give a good prediction of the deformation--strength relationship and will also extrapolate for the strength over the time exceeding the testing period. One can see in Figure }\ref{fig11} {that the highest compression (over 800 kPa) is achieved by the soil collected in test sites 1 to 3. Furthermore, middle values correspond to the soil collected in sites TS 6 to 9 of the testing samples, with maximal values below 330 kPa.\linebreak  The development of the compressive strength is related with the elastic modulus of soil. } %MDPI: changes made in this paragraph
+\begin{figure}[H]
+%\centering
+	\includegraphics[width=13.0 cm]{Fig_11.jpg}
+\caption{Correlation between {the }compression (kPa) and relative deformation of 11 specimens from the sample test site No. 3. \label{fig11}}
+\end{figure}
+
+Accordingly, for {the} sample point No. 3, the expected pattern is shown in the same way in {soil }specimens with values of water/binder ratio between 5--7, see Figure \ref{fig11}. Here, the fragments of the modelled lines were annotated and randomly coloured using {the }IDs of soil samples and records on deformation value against {the }compression (kPa). However, the specimens collected from the sample test point $3\_1$ exhibit {a }slightly lower {level of }strength compared to other two test samples with \hl{w/b} 5. For samples from the point No. 3, less variation in stiffness was detected compared to the samples collected from the test point No. $1\_2$. {Here,} we also demonstrated the relationship between the compressive strength and {a }relative deformation, which reaches peak at 850 kPa, after which {it }stabilizes and {then }decreases. 
+
+%----------- subsection ----------->
+\subsection{P-Wave Velocity vs. UCS}
+
+Figure \ref{fig12} shows a graph of the measured P-wave velocity as a function of the UCS.\linebreak  In this experiment, we {evaluated} the ability of ultrasonic testing to leverage from {the }P-wave velocities to strength gain in {the }soil samples. %MDPI: please check this last sentence to ensure intended meaning is conveyed
+The variations at a higher strength are completely normal. Since {these} data are {presented by the }independent soil samples, we first test P-wave responses passing through specimens of each soil sample test based on their individual characteristics, such as water content, density and grain size. We then evaluate the P-waves in soil samples stabilized with various \hl{w/b} ratios at the start and end times, and the selected intervals in between. {The behaviour of strength over time in samples of soil stabilized by cement approximately resembles the logarithmic curve showing the relationship of the hardening of the materials with their increase in strength. }
+
+Then, we {extracted the} information from {the }measured records, indicating {the }P-wave speed changing over {the }measured time, to evaluate the dynamics in strength gain for each {soil }sample. The technical details of the P-wave values were recored in {the }metadata, including wave speed, maximal and mean values with relation to the UCS. The analysis of the graph in Figure \ref{fig12} shows {the }following data. The P-wave velocity {shows} a stable increase from 415 m/s to 1170 m/s, which is achieved by {the }compressive strength of 1220 kPa.\linebreak  {The speed of P-waves when passing the soil samples was monitored in a straightforward way by measuring the speed from sensors received by the ICP Accelerometer. The development of P-wave velocities continues even after the cementation of the soil mixed with binders during stabilization for a measured period, as depicted in Figure \ref{fig12}. %MDPI: changes made in this paragraph
+
+{The parabola function well represents the relationship between P-wave velocity and compressive strength in Figure} \ref{fig12}, {which clearly depicts its nonlinear nature. The correlation of P-wave-velocity and compressive strength well differs from the curves presented in earlier plots and has a steeper curvature, since it represents the relationship of the speed of the elastic waves on the stiffness  or porosity of the solid material. The tests were performed on soil samples, which have varying \hl{w/b} ratios in the binder mixture cement/slag content. Since the behaviour of elastic waves released by the accelerator and processed back by the receiver differs for samples stabilized with blended mixtures, various values for dots in Figure} \ref{fig12} {well illustrates the effects and minor variations of \hl{w/b} mixtures in slag-cement binders on soil strength. Nevertheless, the trend curve shows a general direction of the relationship between P-waves and strength in soil as a parabola function. Soil samples stabilized with cement/slag binders and different \hl{w/b} ratios can be distinguished as individual dots on a graph.}
+\begin{figure}[H]
+%\centering
+	\includegraphics[width=13.0 cm]{Fig_12.jpg}
+\caption{\hl{P-wave} %MDPI: Please check if an explanation should be added for dot line, and blue dots.
+ velocity as a function of the compressive strength (UCS). \label{fig12}}
+\end{figure}
+
+{In a sense, long-term stabilized samples exhibit a higher degree of strength and correspondingly high P-wave velocities, while the ones recently stabilized have lower values and are comparable (e.g., for P-wave velocities of 440 or 600 m/s), indicating a similar behavior of the soil. However, the highest P-wave speed values (values over 100 m/s) were recorded for the highest UCS and long-term curing time, showing a higher dispersion of values. This is not surprising, as the balanced viscosity of the water-binder ratio in cementitious binders and their rheological parameters are well-known effective factors for soil strength. The strength is assessed using indirect descriptors that differ for individual samples.
+
+Tests with iteratively changed binder parameters were used to select the best combinations by utilizing various \hl{w/b} ratios in a recipe of blended binders. The differences in P-wave behavior and UCS indirectly indicate variations in the porosity of soil stabilized with various blended mixes (cement/slag) and \hl{w/b} ratios, and these are compared with the soil samples recently stabilized, as shown in Figure \ref{fig12}. %MDPI: changes made in this paragraph
+
+
+Figure \ref{fig13} illustrates a graph of the P-wave velocity in relation to the UCS for the Oslo project, compared with selected Swedish projects involving the stabilization of dredged soil sediments. The results obtained in this survey align well with those from the earlier Swedish projects. Thus, with regards to compressive strength and the relationship between P-wave velocity and strength, the test results from this study confirm the expected estimations, as shown in Figure \ref{fig13}.
+
+The results presented in this study demonstrate that the stabilization of dredged marine sediments with an adjusted ratio of water-binder, evaluated using sonic tests, proves to be an efficient and powerful framework. This approach takes into account multiple variables that affect soil hardening and their attributes. %MDPI: changes made in this last paragraph
+\vspace{-3pt}
+\begin{figure}[H]
+%\centering
+	\hspace{1pt}\includegraphics[width=13.0 cm]{Fig_13.jpg}
+\caption{\hl{P-wave} %MDPI: Please revise color for the lines of Regression A and Regression Oslo, because thy're both in black and it's hard to distinguish 
+ velocity as a function of the compressive strength \hl{(UCS).} %MDPI: the caption of figures 12 and 13 are the same, please check and revise
+ \label{fig13}}
+\end{figure}
+
+{In Figure} \ref{fig13}, the P-wave velocity has been evaluated from samples collected from Arendal (A), V\hl{"}%MDPI: please confirm if the '' should be deleted
+aster\aa s (V), Oslo (O), and Timr\aa~(two sites T1 and T2) after the curing period. The analysis of the UCS data interprets the degree of cement hydration, indicating the soil stabilization process from the speed of the P-waves that correlate with increased soil strength during stabilization.} The maximal level of {soil }strength is achieved at the \hl{w/b} \mbox{ratio of 5} where P-waves reach the recorded velocity of 1161 m/s. Such a good performance has a theoretical explanation of {the }optimized plasticity and viscosity of the binder recipe, which improves the mechanical properties of {the }cured soil. In particular, we derive the development of P-wave velocity with curing time{ }up to 60 days to demonstrate the effects from {the }two factors: the dynamics of strength over time and the influence of water--binder percentage on soil setting. 
+
+{This part of the study was conducted as a critical test case to comparatively evaluate the behavior of the treated soil samples relative to the locations and environmental conditions of the original raw materials. The regression analysis demonstrates the statistical processing of the data collected in Oslo (represented by black crosses) at the end of the curing period for different combinations of w/b ratios. We visually analyzed the similarity between the curves for these soil samples, which were tested with varied \hl{w/b} proportions and collected from different locations. The goal was to compare the effects of increasing the ratio of stabilizing agents while decreasing water content.
+
+The graph illustrates a clear visual similarity in curves, with soil collected from the Timr\aa~site exhibiting steeper curves compared to the other locations. This indicates soil samples with the highest percentage of binders relative to water content. } %MDPI: changes made in this paragraph
+
+%----------- subsection ----------->
+\subsection{Environmental Parameters}
+
+The results of the environmental engineering tests performed using shake tests are presented in Tables \ref{tab05} and \ref{tab06}. As a comparison, shake tests were also performed on stabilized samples. However, the shake tests are not completely representative as the material is crushed down to less than 4 mm, which is not the purpose of stabilization/solidification. Nevertheless, these results show a significant reduction in leached heavy metals--arsenic~(As); lead (Pb), cadmium (Cd), chromium (Cr), mercury (Hg), nickel (Ni) and\linebreak  zinc (Zn), sum PAH-16 and tributyltenn (TBT), according to the performed shake tests with L/S 10, PAH, PCB and TBT, see Table \ref{tab05}. The leaching tests were performed using Swedish standard SS-EN 12457-2 \cite{SIS2003}. The extended uncertainty is 51\% according to the standard SS-EN 12457-2. It was calculated with a coverage factor equal to 2, which gives a confidence level of approximately 95\%.
+\begin{table}[H] 
+\tablesize{\scriptsize}
+\caption{Concentration of heavy metals and TBT (mg/kg) for test site Batch 1 sample B according to the leaching tests (Lab number U11853239).\label{tab05}}
+\begin{adjustwidth}{-\extralength}{0cm}
+\begin{tabularx}{\fulllength}{m{2cm}<{\centering}CCCCCCCCCCC}
+\toprule
+\textbf{Sum PAH-16} & \textbf{As} & \textbf{Pb} & \textbf{Cd} & \textbf{Cr} & \textbf{Hg} & \textbf{Ni} & \textbf{Zn} & \textbf{Cu} & \textbf{Mn} & \textbf{Sb} & \textbf{Se} \\
+\midrule
+\hl{0.0383} %MDPI: We used decimal point instead of dot. Please confirm.
+ & 0.0298 & 0.00552 & <0.0005 & 0.0379 & <0.0002 & 0.814 & <0.02 & 6.90 & 0.00430 & 0.00831 & <0.03 \\
+\midrule
+\textbf{\hl{Sum PCB-7} %MDPI: Please confirm if the bold should be retained.
+} & \textbf{\hl{Ca}} & \textbf{\hl{Fe}} & \textbf{\hl{K}} & \textbf{\hl{Mg}} & \textbf{\hl{Na}} & \textbf{\hl{Al}} & \textbf{\hl{B}} & \textbf{\hl{Ba}} & \textbf{\hl{Co}} & \textbf{\hl{V}} & \textbf{\hl{TBT}} \\
+\midrule
+0.000232 & 1590 & 0.129 & 792 & <0.9 & 4260 & 31.7 & 0.385 & 1.06 & 0.0894 & 0.261 & 0.0540 \\
+\bottomrule
+\end{tabularx}
+\end{adjustwidth}
+\end{table}
+\vspace{-9pt}
+\begin{table}[H] 
+\tablesize{\scriptsize}
+\caption{Analysis of the concentration of PCBs (mg/kg) in Batch 1, sample 2 (B1s2).\label{tab06}}
+\begin{tabularx}{\textwidth}{m{0.5cm}<{\centering}m{1.1cm}<{\centering}m{1.1cm}<{\centering}m{1.1cm}<{\centering}m{1.1cm}<{\centering}m{1.3cm}<{\centering}m{1.3cm}<{\centering}m{1.3cm}<{\centering}m{1.3cm}<{\centering}}
+\toprule
+\textbf{TS} & \textbf{PCB 28} & \textbf{PCB 52} & \textbf{PCB 101} & \textbf{PCB 118} & \textbf{PCB 138} & \textbf{PCB 153} & \textbf{PCB 180} & \textbf{Sum PCB-7} \\
+\midrule
+B1s2 & <\hl{0.00007} %MDPI: We used decimal point instead of dot. Please confirm.
+ & <0.00004 & 0.0000526 & 0.0000273 & 0.0000734 & 0.0000528 & 0.0000257 & 0.000232 \\
+\bottomrule
+\end{tabularx}
+\end{table}
+ 
+From a pure civil engineering perspective, it seems more reasonable to model each soil sample as the superposition of factors that include variations in binder proportions and water content \cite{Bumanis,HAN2022e01660,HAY2023131529}. Shared across all {the soil }samples of the same{ }probe, such experiments enable us to evaluate the effects of {the }water--binder dosage on the stabilization process and environmental properties{. Thus, such an approach enables us to evaluate }leaching of heavy metals and toxic substances{, }with regard to the individual properties of soil: density, moisture, grain size, type, texture, content of clay/sand, amount of organic matter. In this paper, we demonstrated that this representation allows us to account for the differences between {various }dosages in water--binder mixtures and their effects on stabilization in the same class of soil samples. Furthermore, we showed the non-linearity in the soil modelling process when we evaluated the relationship between {the }soil texture and water--binder percentage. 
+
+Our results are relevant for {the }analysis of geotechnical properties of soil since they provide new information about the strength parameters of soil stabilized with various water--binder mixtures. Adjusted proportions of binders allow us to focus on soil hardening through the stabilization workflow with an optimized water--binder ratio. We {furthermore }demonstrated {that} the water--binder ratio is {an }important factor in s/s {soil }treatment techniques aimed at improving {the initially }poor engineering properties of dredged marine sediments prior to reuse {as construction materials}. {Thus, the measurements of UCS investigated here provide a concrete illustration of the role of \hl{w/b} recipes in the hardening of clayey soil (dredged sediments collected from the harbour of Oslo) stabilized with cement/slag in various ratios. Since the ratio of these binders remained constant, and we only changed the water content, this enabled us to see the effects of a stiff/wet binder on the hydration of cement and, thus, soil stabilization with various proportions of water/binder.} %MDPI: some changes made in this paragraph
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Conclusions}
+
+In this paper, we developed an effective framework for modelling {the }\hl{w/b} effects on stabilization of clayey dredged materials collected from the harbour of Oslo, Norway.\linebreak  We proposed two methods for evaluating soil strength stabilized using different water/binder ratios, namely, using UCS tests implemented by the MTS 810 servohydraulic universal testing machine, and using sonic tests with evaluated velocities of pulsed P-waves. Inspired by the existing approaches of seismic methods applied to civil engineering problems \cite{app13042745,HARRYPERSADDANIEL2022104557}, we prove that a combination of state-of-the-art methods with non-destructive seismic tests can model the dependency of soil strength on binder proportions, \hl{w/b} ratio and curing time. {Specifically, the analysis of the presented data shows that the lowest P-wave seismic velocity of 1200 m/s is demonstrated by the highest strength and corresponding UCS values, which is achieved by the optimal proportion of water with the lowest content of binder, i.e., \hl{w/b} = 7.99, and the lowest absolute content of binder, such as 2.022 mB/g. This shows the performance of physical mechanisms in soil particles operating during the hydration of cement in the process of soil stabilization, and the setting of soil-binder mixtures, which were evaluated by seismic tests. } %MDPI: changes made in this paragraph; please check
+
+Under the framework of the presented modelling of stabilized soil properties, it was shown that various \hl{w/b} dosages provide essential information at the variable feature level for modelling {the }dependency of soil strength on {a }binder content. Besides, {the }improved binder properties enhance key characteristics of {the }construction materials, such as compressive, tensile and shear strength, ductility and flexure \cite{Reddy2022,Maheretal2008,MaherHo1994}. Finally, the optimal combination of {the }\hl{w/b} ratio is obtained for dredged clayey sediments in {a} laboratory scale, which can be generalized at the {large-scale }project level. {Hence, as noticed in Table \ref{tab04}, summarizing the results of the compressive strength in various \hl{w/b} proportions of binders used for soil stabilization, seismic (P-wave velocities) and mechanical measurements show an agreement in a significant increase in the strength of soil samples over the period of curing with increased binder content and \hl{w/b} = 5 when the strength measured by UCS tests exceeded 500 kPa, and P-waves were higher than 1000 m/s. This proves positive effects from the water/binder ratio of 5 on clayey soil stabilization. } %MDPI: some changes made in this paragraph
+
+The proposed modelling of soil properties at a laboratory scale minimizes the costs of {the }project-run works where large quantities of sediments must be dredged repeatedly for the needs of marine transportation. {In view of this, }the contributions of the this paper are threefold:
+\begin{itemize}
+  \item We proved that dependency of strength of clayey soil on \hl{w/b} ratio can be modelled by a linear combination of tested specimens showing the gain of strength, and the improved ecological properties of soil---leaching of heavy metals and toxic substances. 
+  \item The assumptions on the effects from {the }changed \hl{w/b} dosage on{ the }behaviour {of the marine sediments }is tested by adding various percentages of admixtures of cement/slag as binders.
+  \item We developed a novel framework for testing high-plasticity clayey sediments collected in Oslo harbour, Norway, and proposed two methods for evaluating soil strength using the standard UCS approach and measured P-wave velocities. 
+  \item We showed that the combination of {the }P-waves and UCS methods for evaluating soil properties outperforms the standard state-of-the-art approach in two ways. 
+  	\begin{itemize}[leftmargin=0.8cm,labelsep=4.9mm]
+  		\item First, the P-wave velocities are non-destructive tests, which can be performed using portable devices and contain necessary information related to soil strength. 
+		\item Second, the analyzed sensitivity of the ICP Accelerometer for measured resonance frequencies of sediments proved its high perception to varied {levels of }stiffness and viscosity of {soil }samples stabilized with different \hl{w/b} dosages.
+	\end{itemize}
+\end{itemize}
+
+The essential practical advantage of the presented work consists in the optimization of {the }soil stabilization process in marine harbours {prior to construction works where large quantities of soil are to be stabilized. For instance, optimization of the processing of }millions of tons of the dredged sediment material {using} s/s techniques {increases cost-effectiveness}. Thus, the optimization of s/s techniques in such large-scale projects is crucial. The optimization of {the} \hl{w/b} dosage supports finding the best analytical solution for cost-effective s/s treatment of soil from marine harbours, when sediments are collected regularly and in large quantities. Using our data, the information on soil strength depending on {the} \hl{w/b} ratio and deformation of clayey soil specimens in the process of compression can be generalized in large-scale projects. {Overall, the results of seismic and UCS measurements demonstrated in this study show a similar trend and agreement in the estimated strength of stabilized specimens. The strength increased over the curing time in stabilized soil samples, as indicated by both seismic and UCS measurements.} %MDPI: some changes made in this last paragraph
+\vspace{6pt}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\authorcontributions{Supervision, conceptualization, methodology,  data curation, visualization, software, validation, resources, investigation, funding acquisition, and project administration,\linebreak  P.L. (Per Lindh); writing---original draft preparation, methodology, software, formal analysis,\linebreak writing---review and editing, and investigation, P.L. (Polina Lemenkova). All authors have read and agreed to the published version of the manuscript.}
+
+\funding{\hl{The publication was funded by the Editorial Office of} %MDPI: discount infomation from the Editorial Office is not allowed to be put in the manuscript, please consider removing this part and change it to ''This research received no external funding''
+ \emph{Sustainability}, Multidisciplinary Digital Publishing Institute (MDPI), by providing 100\% discount for the APC of this manuscript. }
+
+\institutionalreview{Not applicable.}
+
+\informedconsent{Not applicable.}
+
+\dataavailability{Not applicable.} 
+
+\acknowledgments{The authors thank the reviewers for reading, suggestions and comments that improved an earlier version of this manuscript. \hl{The authors express sincere gratitude to the Editorial Office of Sustainability, MDPI for financial support of this publication.} %MDPI: please consider removing this part. Thank you very much
+}
+
+\conflictsofinterest{The authors declare no conflict of interest.} 
+
+
+\abbreviations{Abbreviations}{
+The following abbreviations are used in this manuscript:\\
+
+\noindent 
+\begin{tabular}{@{}ll}
+GGBFS & Ground Granulated Blast-Furnace Slag \\
+UCS & Uniaxial Compressive Strength \\
+MTS & Material Testing Systems \\
+SGI & Swedish Geotechnical Institute
+\end{tabular}
+}
+
+\appendixtitles{yes} % Leave argument "no" if all appendix headings stay EMPTY (then no dot is printed after "Appendix A"). If the appendix sections contain a heading then change the argument to "yes".
+\appendixstart
+\appendix
+\section[\appendixname~\thesection]{Grain Distribution Plots}
+\begin{figure}[H]
+\hspace{1pt}
+	\begin{subfigure}[b]{.3\textwidth}
+			\includegraphics[width=4cm]{Fig_K1.jpg}
+		\captionsetup{position=bottom,justification=centering}\caption{}
+	\end{subfigure} \hspace{1mm}
+	\begin{subfigure}[b]{.3\textwidth}
+			\includegraphics[width=4cm]{Fig_K2.jpg}
+		\captionsetup{position=bottom,justification=centering}\caption{}
+	\end{subfigure} \hspace{1mm}
+	\begin{subfigure}[b]{.3\textwidth}
+			\includegraphics[width=4cm]{Fig_K3.jpg}
+		\captionsetup{position=bottom,justification=centering}\caption{}
+	\end{subfigure} 
+\vspace{9pt}
+\caption{\textit{Cont}.}
+\label{fig:petit3leaks3D}
+\end{figure}
+\begin{figure}[H]\ContinuedFloat
+\hspace{1pt}
+%\centering
+		\vspace{1mm}
+	\begin{subfigure}[b]{.3\textwidth}
+			\includegraphics[width=4cm]{Fig_K4.jpg}
+		\captionsetup{position=bottom,justification=centering}\caption{}
+	\end{subfigure}\hspace{1mm}
+	\begin{subfigure}[b]{.3\textwidth}
+			\includegraphics[width=4cm]{Fig_K5.jpg}
+		\captionsetup{position=bottom,justification=centering}\caption{}
+	\end{subfigure}\hspace{1mm}
+		\begin{subfigure}[b]{.3\textwidth}
+			\includegraphics[width=4cm]{Fig_K6.jpg}
+		\captionsetup{position=bottom,justification=centering}\caption{}
+	\end{subfigure}
+\vspace{6pt}
+\caption{\hl{Grain} %MDPI: 1. Please use periods as decimal sign instead of commas. e.g., "0,1" should be "0.1". 2. Please provide explanation for sub-figures (a-f). 3. Figure b, there is extra line at left side, please confirm if should be remove.
+ distribution in sediments showing dominated fine-grained silts (<0.063 mm).}\label{figA1}
+\end{figure}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{adjustwidth}{-\extralength}{0cm}
+%\printendnotes[custom] % Un-comment to print a list of endnotes
+
+\reftitle{\highlighting{References} %MDPI: Please do NOT change the reference format with EndNote and other tools. Our production editor has done thorough layout work for reference. If any changes are necessary, please use the “Track changes function”. Thanks for your cooperation.
+}
+
+%=====================================
+% References, variant A: external bibliography
+%=====================================
+%\bibliography{Oslo.bib}
+\begin{thebibliography}{999}
+
+\bibitem[Lim et~al.(2020)Lim, Shih, Tsai, Yang, Chen, and Dong]{LIM2020110869}
+Lim, Y.C.; Shih, Y.J.; Tsai, K.C.; Yang, W.D.; Chen, C.W.; Dong, C.D.
+\newblock Recycling dredged harbor sediment to construction materials by
+  sintering with steel slag and waste glass: Characteristics, alkali-silica
+  reactivity and metals stability.
+\newblock {\em J. Environ. Manag.}\linebreak  {\mbox{\bf 2020}, {\em
+  270},~110869.}
+\newblock {\url{https://doi.org/10.1016/j.jenvman.2020.110869}}.
+
+\bibitem[Lindh and Lemenkova(2022)]{Lindh202208}
+Lindh, P.; Lemenkova, P.
+\newblock {Geochemical tests to study the effects of cement ratio on potassium
+  and TBT leaching and the pH of the marine sediments from the Kattegat Strait,
+  Port of Gothenburg, Sweden}.
+\newblock {\em Baltica} {\bf 2022}, {\em 35},~47--59.
+\newblock {\url{https://doi.org/10.5200/baltica.2022.1.4}}.
+
+\bibitem[Wang et~al.(2022)Wang, Zentar, Wang, and Ouendi]{Wangetal2022}
+Wang, H.; Zentar, R.; Wang, D.; Ouendi, F.
+\newblock New Applications of Ordinary Portland and Calcium Sulfoaluminate
+  Composite Binder for Recycling Dredged Marine Sediments as Road Materials.
+\newblock {\em Int. J. Geomech.} {\bf 2022}, {\em
+  22},~04022068.
+\newblock {\url{https://doi.org/10.1061/(ASCE)GM.1943-5622.0002373}}.
+
+\bibitem[Hussain et~al.(2022)Hussain, Levacher, Leblanc, Zmamou, Djeran-Maigre,
+  Razakamanantsoa, and Saouti]{HUSSAIN2022100046}
+Hussain, M.; Levacher, D.; Leblanc, N.; Zmamou, H.; Djeran-Maigre, I.;
+  Razakamanantsoa, A.; Saouti, L.
+\newblock Reuse of harbour and river dredged sediments in adobe bricks.
+\newblock {\em Clean. Mater.} {\bf 2022}, {\em 3},~100046.
+\newblock {\url{https://doi.org/10.1016/j.clema.2022.100046}}.
+
+\bibitem[Slimanou et~al.(2020)Slimanou, Eliche-Quesada, Kherbache, Bouzidi, and
+  Tahakourt]{SLIMANOU2020101085}
+Slimanou, H.; Eliche-Quesada, D.; Kherbache, S.; Bouzidi, N.; Tahakourt, A.
+\newblock Harbor Dredged Sediment as raw material in fired clay brick
+  production: Characterization and properties.
+\newblock {\em J. Build. Eng.} {\bf 2020}, {\em 28},~101085.
+\newblock {\url{https://doi.org/10.1016/j.jobe.2019.101085}}.
+
+\bibitem[Wang et~al.(2017)Wang, Zentar, and Abriak]{Wangetal2017}
+Wang, D.; Zentar, R.; Abriak, N.E.
+\newblock Temperature-Accelerated Strength Development in Stabilized Marine
+  Soils as Road Construction Materials.
+\newblock {\em J. Mater. Civ. Eng.} {\bf 2017}, {\em
+  29},~04016281.
+\newblock {\url{https://doi.org/10.1061/(ASCE)MT.1943-5533.0001778}}.
+
+\bibitem[Yoobanpot et~al.(2020)Yoobanpot, Jamsawang, Simarat, Jongpradist, and
+  Likitlersuang]{Yoobanpot}
+Yoobanpot, N.; Jamsawang, P.; Simarat, P.; Jongpradist, P.; Likitlersuang, S.
+\newblock {Sustainable reuse of dredged sediments as pavement materials by
+  cement and fly ash stabilization}.
+\newblock {\em J. Soils Sediments} {\bf 2020}, {\em
+  20},~3807--3823.
+\newblock {\url{https://doi.org/10.1007/s11368-020-02635-x}}.
+
+\bibitem[Calmano et~al.(1986)Calmano, F{\"o}rstner, Kersten, and
+  Krause]{Calmano1986}
+Calmano, W.; F{\"o}rstner, U.; Kersten, M.; Krause, D. Behaviour of Dredged
+  Mud after Stabilization with Different Additives.\linebreak 
+\newblock In {\em Contaminated Soil: First International TNO Conference on
+  Contaminated Soil, Utrecht, The Netherlands, 11--15 November 1985}; Springer:
+  Dordrecht, The Netherlands, 1986; pp. 737--746.
+\newblock {\url{https://doi.org/10.1007/978-94-009-5181-5_83}}.
+
+\bibitem[Pedersen et~al.(2021)Pedersen, Benamar, Ammami, Portet-Koltalo, and
+  Kirkelund]{Pedersen}
+Pedersen, K.B.; Benamar, A.; Ammami, M.T.; Portet-Koltalo, F.; Kirkelund, G.M.,
+  Electrokinetic Remediation of Dredged Contaminated Sediments.
+\newblock In {\em Electrokinetic Remediation for Environmental Security and
+  Sustainability}; John Wiley \& Sons, Ltd.:  {Hoboken, NJ, USA,} 
+  2021; Chapter~5, pp. 99--139.
+\newblock {\url{https://doi.org/10.1002/9781119670186.ch5}}.
+
+\bibitem[Puppala et~al.(1999)Puppala, Mohammad, and Allen]{Puppala}
+Puppala, A.J.; Mohammad, L.N.; Allen, A.
+\newblock Permanent Deformation Characterization of Subgrade Soils from RLT
+  Test.
+\newblock {\em J. Mater. Civ. Eng.} {\bf 1999}, {\em
+  11},~274--282.
+\newblock {\url{https://doi.org/10.1061/(ASCE)0899-1561(1999)11:4(274)}}.
+
+\bibitem[Crocetti et~al.(2022)Crocetti, González-Camejo, Li, Foglia, Eusebi,
+  and Fatone]{CROCETTI202220}
+Crocetti, P.; González-Camejo, J.; Li, K.; Foglia, A.; Eusebi, A.; Fatone, F.
+\newblock An overview of operations and processes for circular management of
+  dredged sediments.
+\newblock {\em Waste Manag.} {\bf 2022}, {\em 146},~20--35.
+\newblock {\url{https://doi.org/10.1016/j.wasman.2022.04.040}}.
+
+\bibitem[Svensson et~al.(2022)Svensson, Norén, Modin, {Karlfeldt Fedje},
+  Rauch, Strömvall, and Andersson-Sköld]{SVENSSON202230}
+Svensson, N.; Norén, A.; Modin, O.; {Karlfeldt Fedje}, K.; Rauch, S.;
+  Strömvall, A.M.; Andersson-Sköld, Y.
+\newblock Integrated cost and environmental impact assessment of management
+  options for dredged sediment.
+\newblock {\em Waste Manag.} {\bf 2022}, {\em 138},~30--40.
+\newblock {\url{https://doi.org/10.1016/j.wasman.2021.11.031}}.
+
+\bibitem[Grubb et~al.(2008)Grubb, Chrysochoou, and Smith]{Grubbetal2008}
+Grubb, D.G.; Chrysochoou, M.; Smith, C.J. Dredged Material Stabilization: The
+  Role of Mellowing on Cured Properties.\linebreak 
+\newblock In Proceedings of the GeoCongress 2008, \hl{New Orleans, LA, USA, 9--12 March 2008;} %MDPI: Newly added information. Please confirm.
+  ASCE: \hl{Reston, VA, USA,}  2008; pp. 772--779.
+\newblock {\url{https://doi.org/10.1061/40970(309)97}}.
+
+\bibitem[Yu et~al.(2021)Yu, Cui, Zhao, and Zheng]{YU2021125568}
+Yu, C.; Cui, C.; Zhao, J.; Zheng, J.
+\newblock A novel approach to utilizing dredged materials at the laboratory
+  scale.
+\newblock {\em Constr. Build. Mater.} {\bf 2021}, {\em
+  313},~125568.
+\newblock {\url{https://doi.org/10.1016/j.conbuildmat.2021.125568}}.
+
+\bibitem[Dermatas et~al.(2002)Dermatas, Dutko, Balorda-Barone, and
+  Moon]{Dermatas}
+Dermatas, D.; Dutko, P.; Balorda-Barone, J.; Moon, D.H. Geotechnical
+  Properties of Cement Treated Dredged Sediment to Be Used as Transportation
+  Fill.
+\newblock In {\em Dredging '02}; ASCE: \hl{Reston, VA, USA,} 2002; pp. 1--14.
+\newblock {\url{https://doi.org/10.1061/40680(2003)139}}.
+
+\bibitem[Wang et~al.(2021)Wang, Xu, Zhang, Shen, and Al-Tabbaa]{Wangetal2021}
+Wang, F.; Xu, J.; Zhang, Y.; Shen, Z.; Al-Tabbaa, A.
+\newblock MgO-GGBS Binder–Stabilized/Solidified PAE-Contaminated Soil:
+  Strength and Leachability in Early Stage.
+\newblock {\em J. Geotech. Geoenviron. Eng.} {\bf
+  2021}, {\em 147},~04021059.
+\newblock {\url{https://doi.org/10.1061/(ASCE)GT.1943-5606.0002569}}.
+
+\bibitem[Calmano(1988)]{Calmano1988}
+Calmano, W. Stabilization of Dredged Mud.
+\newblock In {\em Environmental Management of Solid Waste: Dredged Material and
+  Mine Tailings}; Springer:  Berlin/Heidelberg, Germany, 1988; pp.
+  80--98.
+\newblock {\url{https://doi.org/10.1007/978-3-642-61362-3_5}}.
+
+\bibitem[Zhang et~al.(2020)Zhang, Zhao, McCabe, Chen, and
+  Morrison]{ZHANG2020138551}
+Zhang, W.; Zhao, L.; McCabe, B.A.; Chen, Y.; Morrison, L.
+\newblock Dredged marine sediments stabilized/solidified with cement and GGBS:
+  Factors affecting mechanical behaviour and leachability.
+\newblock {\em Sci. Total Environ.} {\bf 2020}, {\em 733},~138551.
+\newblock {\url{https://doi.org/10.1016/j.scitotenv.2020.138551}}.
+
+\bibitem[Slama et~al.(2021)Slama, Feki, Levacher, and Zairi]{SLAMA2021127}
+Slama, A.B.; Feki, N.; Levacher, D.; Zairi, M.
+\newblock Valorization of harbor dredged sediment activated with blast furnace
+  slag in road layers.
+\newblock {\em Int. J. Sediment Res.} {\bf 2021}, {\em
+  36},~127--135.
+\newblock {\url{https://doi.org/10.1016/j.ijsrc.2020.08.001}}.
+
+\bibitem[Lindh and Lemenkova(2022)]{Lemenkova202233}
+Lindh, P.; Lemenkova, P.
+\newblock {Leaching of Heavy Metals from Contaminated Soil Stabilised by
+  Portland Cement and Slag Bremen}.
+\newblock {\em Ecol. Chem. Eng. S} {\bf 2022}, {\em
+  29},~537--552.
+\newblock {\url{https://doi.org/10.2478/eces-2022-0039}}.
+
+\bibitem[Zhang et~al.(2021)Zhang, Zhao, Yuan, Li, and
+  Morrison]{ZHANG2021128926}
+\textls[-20]{Zhang, W.; Zhao, L.; Yuan, Z.; Li, D.; Morrison, L.}
+\newblock Assessment of the long-term leaching characteristics of cement-slag
+  stabilized/\linebreak solidified contaminated sediment.
+\newblock {\em Chemosphere} {\bf 2021}, {\em 267},~128926.
+\newblock {\url{https://doi.org/10.1016/j.chemosphere.2020.128926}}.
+
+\bibitem[Chi et~al.(2023)Chi, Li, Zhang, Liang, Huang, Peng, and
+  Sun]{CHI2023131545}
+Chi, L.; Li, M.; Zhang, Q.; Liang, X.; Huang, C.; Peng, B.; Sun, H.
+\newblock Cobalt immobilization performance and mechanism analysis of low
+  carbon belite calcium sulfoaluminate cement.
+\newblock {\em Constr. Build. Mater.} {\bf 2023}, {\em
+  386},~131545.
+\newblock {\url{https://doi.org/10.1016/j.conbuildmat.2023.131545}}.
+
+\bibitem[da~Rocha et~al.(2021)da~Rocha, Marin, Samaniego, and Consoli]{Rocha}
+da~Rocha, C.G.; Marin, E.J.B.; Samaniego, R.A.Q.; Consoli, N.C.
+\newblock Decision-Making Model for Soil Stabilization: Minimizing Cost and
+  Environmental Impacts.
+\newblock {\em J. Mater. Civ. Eng.} {\bf 2021}, {\em
+  33},~06020024.
+\newblock {\url{https://doi.org/10.1061/(ASCE)MT.1943-5533.0003551}}.
+
+\bibitem[Wang et~al.(2018)Wang, Chen, Tsang, Li, Baek, Hou, Ding, and
+  Poon]{WANG201869}
+Wang, L.; Chen, L.; Tsang, D.C.; Li, J.S.; Baek, K.; Hou, D.; Ding, S.; Poon,
+  C.S.
+\newblock Recycling dredged sediment into fill materials, partition blocks, and
+  paving blocks: Technical and economic assessment.
+\newblock {\em J. Clean. Prod.} {\bf 2018}, {\em 199},~69--76.
+\newblock {\url{https://doi.org/10.1016/j.jclepro.2018.07.165}}.
+
+\bibitem[McLeod(1944)]{McLeod}
+McLeod, N.W.
+\newblock Principles and Practice of Mechanical and Waterproofed Mechanical
+  Soil Stabilization.
+\newblock {\em Soil Sci. Soc. Am. J.} \mbox{{\bf 1944}, {\em
+  8},~448--451.}
+\newblock {\url{https://doi.org/10.2136/sssaj1944.036159950008000C0093x}}.
+
+\bibitem[Yongfeng et~al.(2012)Yongfeng, Songyu, Jian'an, Kan, Yanjun, and
+  Fei]{Yongfeng}
+Yongfeng, D.; Songyu, L.; Jian'an, H.; Kan, L.; Yanjun, D.; Fei, J. Strength
+  and Permeability of Cemented Soil with PAM.\linebreak 
+\newblock In {\em Grouting and Deep Mixing 2012}; ASCE: \hl{Reston, VA, USA,}  2012; pp. 1800--1807.
+\newblock {\url{https://doi.org/10.1061/9780784412350.0155}}.
+
+\bibitem[Rashidi and Ashtiani(2019)]{Rashidi}
+Rashidi, M.; Ashtiani, R.S. Scale Effects in the Indirect Tensile and
+  Unconfined Compressive Strength Tests of Cement-Stabilized Base Materials.
+\newblock In Proceedings of the Geo-Congress 2019, \hl{Philadelphia, PA, USA, 24--27 March} 2019; ASCE: \hl{Reston, VA, USA,}  2019; pp. 628--639.
+\newblock {\url{https://doi.org/10.1061/9780784482124.064}}.
+
+\bibitem[Zhang and Yu(2011)]{Zhangetal2011}
+Zhang, J.; Yu, X. Study on the Development Characteristics of the Strength of
+  Inorganic Binder Modified Saline Soil.\linebreak 
+\newblock In Proceedings of the ICCTP 2011, \hl{Nanjing, China, 14--17 August} 2011; ASCE: \hl{Reston, VA, USA,}  2011; pp. 3701--3705.
+\newblock {\url{https://doi.org/10.1061/41186(421)369}}.
+
+\bibitem[Rios et~al.(2017)Rios, Cristelo, da~Fonseca, and Ferreira]{Rios}
+Rios, S.; Cristelo, N.; da~Fonseca, A.V.; Ferreira, C.
+\newblock Stiffness Behavior of Soil Stabilized with Alkali-Activated Fly Ash
+  from Small to Large Strains.
+\newblock {\em Int. J. Geomech.} {\bf 2017}, {\em
+  17},~04016087.
+\newblock {\url{https://doi.org/10.1061/(ASCE)GM.1943-5622.0000783}}.
+
+\bibitem[Zhang et~al.(2022)Zhang, Li, and Lang]{ZHANG2022127996}
+Zhang, X.; Li, D.; Lang, L.
+\newblock Evaluation of strength development in cemented dredged sediment
+  admixing recycled glass powder.
+\newblock {\em Constr. Build. Mater.} {\bf 2022}, {\em
+  342},~127996.
+\newblock {\url{https://doi.org/10.1016/j.conbuildmat.2022.127996}}.
+
+\bibitem[Lindh and Lemenkova(2022)]{Lindh202232}
+Lindh, P.; Lemenkova, P.
+\newblock {Shear bond and compressive strength of clay stabilised with
+  lime/cement jet grouting and deep mixing: A case of Norvik, Nynäshamn}.
+\newblock {\em Nonlinear Eng.} {\bf 2022}, {\em 11},~693--710.
+\newblock {\url{https://doi.org/10.1515/nleng-2022-0269}}.
+
+\bibitem[Ye et~al.(2021)Ye, Shu, Zhang, Kang, Zhang, and Wang]{Ye}
+Ye, G.; Shu, H.; Zhang, Z.; Kang, S.; Zhang, S.; Wang, Q.
+\newblock {Solidification and field assessment of soft soil stabilized by a
+  waste-based binder using deep mixing method}.
+\newblock {\em Bull. Eng. Geol. Environ.} {\bf 2021},
+  {\em 80},~5061--5074.
+\newblock {\url{https://doi.org/10.1007/s10064-021-02193-7}}.
+
+\bibitem[Grubb et~al.(2010)Grubb, Chrysochoou, Smith, and Malasavage]{Grubb}
+Grubb, D.G.; Chrysochoou, M.; Smith, C.J.; Malasavage, N.E.
+\newblock Stabilized Dredged Material. I: Parametric Study.
+\newblock {\em J. Geotech. Geoenviron. Eng.} {\bf
+  2010}, {\em 136},~1011--1024.
+\newblock {\url{https://doi.org/10.1061/(ASCE)GT.1943-5606.0000254}}.
+
+\bibitem[Wang et~al.(2018)Wang, Zentar, and Abriak]{Wangetal2018}
+Wang, D.; Zentar, R.; Abriak, N.E.
+\newblock Durability and Swelling of Solidified/Stabilized Dredged Marine Soils
+  with Class-F Fly Ash, Cement, and Lime.
+\newblock {\em J. Mater. Civ. Eng.} {\bf 2018}, {\em
+  30},~04018013.
+\newblock {\url{https://doi.org/10.1061/(ASCE)MT.1943-5533.0002187}}.
+
+\bibitem[Grubb et~al.(2010)Grubb, Malasavage, Smith, and
+  Chrysochoou]{Grubbetal2010}
+Grubb, D.G.; Malasavage, N.E.; Smith, C.J.; Chrysochoou, M.
+\newblock Stabilized Dredged Material. II: Geomechanical Behavior.
+\newblock {\em J. Geotech. Geoenviron. Eng.} {\bf
+  2010}, {\em 136},~1025--1036.
+\newblock {\url{https://doi.org/10.1061/(ASCE)GT.1943-5606.0000290}}.
+
+\bibitem[Nguyen et~al.(2018)Nguyen, Rabbanifar, Brake, Qian, Kibodeaux,
+  Crochet, Oruji, Whitt, Farrow, Belaire, Bernazzani, and Jao]{Nguyen}
+Nguyen, T.T.M.; Rabbanifar, S.; Brake, N.A.; Qian, Q.; Kibodeaux, K.; Crochet,
+  H.E.; Oruji, S.; Whitt, R.; Farrow, J.; Belaire, B.;  et~al.
+\newblock Stabilization of Silty Clayey Dredged Material.
+\newblock {\em J. Mater. Civ. Eng.} {\bf 2018}, {\em
+  30},~04018199.
+\newblock {\url{https://doi.org/10.1061/(ASCE)MT.1943-5533.0002391}}.
+
+\bibitem[Couvidat et~al.(2016)Couvidat, Benzaazoua, Chatain, and
+  Bouzahzah]{Couvidat}
+Couvidat, J.; Benzaazoua, M.; Chatain, V.; Bouzahzah, H.
+\newblock {Environmental evaluation of dredged sediment submitted to a
+  solidification stabilization process using hydraulic binders}.
+\newblock {\em Environ. Sci. Pollut. Res.} {\bf 2016}, {\em
+  23},~17142--17157.
+\newblock {\url{https://doi.org/10.1007/s11356-016-6869-9}}.
+
+\bibitem[Pu et~al.(2021)Pu, Mastoi, Chen, Song, Qiu, and Yang]{Puetal2021}
+Pu, H.; Mastoi, A.K.; Chen, X.; Song, D.; Qiu, J.; Yang, P.
+\newblock {An integrated method for the rapid dewatering and
+  solidification/stabilization of dredged contaminated sediment with a high
+  water content}.
+\newblock {\em Front. Environ. Sci. Eng.} {\bf 2021},
+  {\em 15},~67.
+\newblock {\url{https://doi.org/10.1007/s11783-020-1359-1}}.
+
+\bibitem[Nordmark et~al.(2014)Nordmark, Vestin, Lagerkvist, Lind, Arm, and
+  Hallgren]{Nordmark}
+Nordmark, D.; Vestin, J.; Lagerkvist, A.; Lind, B.B.; Arm, M.; Hallgren, P.
+\newblock Geochemical Behavior of a Gravel Road Upgraded with Wood Fly Ash.
+\newblock {\em J. Environ. Eng.} {\bf 2014}, {\em
+  140},~05014002.
+\newblock {\url{https://doi.org/10.1061/(ASCE)EE.1943-7870.0000821}}.
+
+\bibitem[Min et~al.(2021)Min, Wu, Li, and Zhang]{Min}
+Min, Y.; Wu, J.; Li, B.; Zhang, J.
+\newblock Effects of Fly Ash Content on the Strength Development of Soft Clay
+  Stabilized by One-Part Geopolymer under Curing Stress.
+\newblock {\em J. Mater. Civ. Eng.} {\bf 2021}, {\em
+  33},~04021274.
+\newblock {\url{https://doi.org/10.1061/(ASCE)MT.1943-5533.0003887}}.
+
+\bibitem[Taj et~al.(2022)Taj, Rahman, Islam, Rahman, Hossain, Hossain, and
+  Islam]{Taj}
+Taj, T.H.; Rahman, F.; Islam, M.R.; Rahman, M.A.; Hossain, M.I.; Hossain, S.A.;
+  Islam, M.M. Alkali Activated Fly Ash and Slag Combination for Soil Cement
+  Mixing Piles.
+\newblock In Proceedings of the International Conference on Transportation and Development, \hl{Seattle, WA, USA, 31 May--3 June} 2022; ASCE: \hl{Reston, VA, USA,}  2022; pp. 133--142.
+\newblock {\url{https://doi.org/10.1061/9780784484357.012}}.
+
+\bibitem[Eissa et~al.(2022)Eissa, Bassuoni, Ghazy, and Alfaro]{Eissa}
+Eissa, A.; Bassuoni, M.T.; Ghazy, A.; Alfaro, M.
+\newblock Improving the Properties of Soft Clay Using Cement, Slag, and
+  Nanosilica: Experimental and Statistical Modeling.
+\newblock {\em J. Mater. Civ. Eng.} {\bf 2022}, {\em
+  34},~04022031.
+\newblock {\url{https://doi.org/10.1061/(ASCE)MT.1943-5533.0004172}}.
+
+\bibitem[Zhu et~al.(2016)Zhu, Qin, and Hwang]{ShuJing}
+Zhu, S.J.; Qin, Y.; Hwang, J.Y. Solidification of Dredged Sludge by Hydraulic
+  ASH-SLAG Cementitious Materials.\linebreak 
+\newblock In {\em Characterization of Minerals, Metals, and Materials 2016};
+  John Wiley \& Sons, Ltd.:  \hl{Hoboken, NJ, USA,} 2016; Chapter~31, pp. 255--261.
+\newblock {\url{https://doi.org/10.1002/9781119263722.ch31}}.
+
+\bibitem[Muthukkumaran and Anusudha(2020)]{Muthukkumaran}
+Muthukkumaran, K.; Anusudha, V.
+\newblock Study on Behavior of Copper Slag and Lime–Treated Clay under Static
+  and Dynamic Loading.
+\newblock {\em J. Mater. Civ. Eng.} {\bf 2020}, {\em
+  32},~04020230.
+\newblock {\url{https://doi.org/10.1061/(ASCE)MT.1943-5533.0003259}}.
+
+\bibitem[Heitor et~al.(2021)Heitor, Parkinson, and Kotzur]{app11031080}
+Heitor, A.; Parkinson, J.; Kotzur, T.
+\newblock The Role of Soil Stabilization in Mitigating the Impact of Climate
+  Change in Transport Infrastructure with Reference to Wetting Processes.
+\newblock {\em Appl. Sci.} {\bf 2021}, {\em 11}, {1080.} %MDPI: Newly added information. Please confirm.
+\newblock {\url{https://doi.org/10.3390/app11031080}}.
+
+\bibitem[Lindh and Lemenkova(2022)]{Lindh202226}
+Lindh, P.; Lemenkova, P.
+\newblock {Simplex Lattice Design and X-ray Diffraction for Analysis of Soil
+  Structure: A Case of Cement-Stabilised Compacted Tills Reinforced with Steel
+  Slag and Slaked Lime}.
+\newblock {\em Electronics} {\bf 2022}, {\em 11},~3726.
+\newblock {\url{https://doi.org/10.3390/electronics11223726}}.
+
+\bibitem[Li et~al.(2019)Li, Zhou, Wang, Xue, and Poon]{Lietal2019}
+Li, J.; Zhou, Y.; Wang, Q.; Xue, Q.; Poon, C.S.
+\newblock Development of a Novel Binder Using Lime and Incinerated Sewage
+  Sludge Ash to Stabilize and Solidify Contaminated Marine Sediments with High
+  Water Content as a Fill Material.
+\newblock {\em J. Mater. Civ. Eng.} \mbox{{\bf 2019}, {\em
+  31},~04019245.}
+\newblock {\url{https://doi.org/10.1061/(ASCE)MT.1943-5533.0002913}}.
+
+\bibitem[Corrêa-Silva et~al.(2021)Corrêa-Silva, Rouainia, Miranda, and
+  Cristelo]{CORREASILVA2021106260}
+Corrêa-Silva, M.; Rouainia, M.; Miranda, T.; Cristelo, N.
+\newblock Predicting the mechanical behaviour of a sandy clay stabilised with
+  an alkali-activated binder.
+\newblock {\em Eng. Geol.} {\bf 2021}, {\em 292},~106260.
+\newblock {\url{https://doi.org/10.1016/j.enggeo.2021.106260}}.
+
+\bibitem[Bazne et~al.(2017)Bazne, Howard, and Vahedifard]{Bazne}
+Bazne, M.O.A.; Howard, I.L.; Vahedifard, F.
+\newblock Stabilized Very High---Moisture Dredged Soil: Relative Behavior of
+  Portland-Limestone Cement and Ordinary Portland Cement.
+\newblock {\em J. Mater. Civ. Eng.} {\bf 2017}, {\em
+  29},~04017110.
+\newblock {\url{https://doi.org/10.1061/(ASCE)MT.1943-5533.0001970}}.
+
+\bibitem[Li et~al.(2016)Li, Xue, Wang, Zhang, and Zhao]{Lietal2016}
+Li, J.S.; Xue, Q.; Wang, P.; Zhang, T.T.; Zhao, Y.
+\newblock Comparison of solidification/stabilization of lead contaminated soil
+  between magnesia–phosphate cement and ordinary portland cement under the
+  same dosage.
+\newblock {\em Environ. Prog. Sustain. Energy} {\bf 2016}, {\em
+  35},~88--94.
+\newblock {\url{https://doi.org/10.1002/ep.12204}}.
+
+\bibitem[Gu et~al.(2014)Gu, Jin, Al-Tabbaa, and Shi]{Gu}
+Gu, K.; Jin, F.; Al-Tabbaa, A.; Shi, B. Initial Investigation of Soil
+  Stabilization with Calcined Dolomite-GGBS Blends.
+\newblock In {\em Ground Improvement and Geosynthetics}; ASCE: \hl{Reston, VA, USA,} 2014; pp.
+  148--157.
+\newblock {\url{https://doi.org/10.1061/9780784413401.015}}.
+
+\bibitem[Lindh and Lemenkova(2022)]{Lindh202222}
+Lindh, P.; Lemenkova, P.
+\newblock {Permeability, compressive strength and Proctor parameters of silts
+  stabilised by Portland cement and ground granulated blast furnace slag
+  (GGBFS)}.
+\newblock {\em Arch. Mech. Eng.} {\bf 2022}, {\em
+  69},~667--692.
+\newblock {\url{https://doi.org/10.24425/ame.2022.141522}}.
+
+\bibitem[Nagy et~al.(2018)Nagy, Cîrcu, Ilieş, Moldovan, Gherman, and
+  Péter]{NAGY}
+Nagy, A.C.; Cîrcu, A.P.; Ilieş, N.M.; Moldovan, D.V.; Gherman, C.; Péter, A.
+\newblock Soil stabilization with modern hydraulic binders. Variations of
+  geotechnical parameters.
+\newblock {\em ce/papers} {\bf 2018}, {\em 2},~1021--1026.
+\newblock {\url{https://doi.org/10.1002/cepa.806}}.
+
+\bibitem[Yi et~al.(2014)Yi, Liska, and Al-Tabbaa]{Yi}
+Yi, Y.; Liska, M.; Al-Tabbaa, A.
+\newblock Properties of Two Model Soils Stabilized with Different Blends and
+  Contents of GGBS, MgO, Lime, and PC.
+\newblock {\em J. Mater. Civ. Eng.} {\bf 2014}, {\em
+  26},~267--274.
+\newblock {\url{https://doi.org/10.1061/(ASCE)MT.1943-5533.0000806}}.
+
+\bibitem[Ismail et~al.(2002)Ismail, Joer, Sim, and Randolph]{Ismail}
+Ismail, M.A.; Joer, H.A.; Sim, W.H.; Randolph, M.F.
+\newblock Effect of Cement Type on Shear Behavior of Cemented Calcareous Soil.\linebreak 
+\newblock {\em J. Geotech. Geoenviron. Eng.} {\bf
+  2002}, {\em 128},~520--529.
+\newblock {\url{https://doi.org/10.1061/(ASCE)1090-0241(2002)128:6(520)}}.
+
+\bibitem[Lam et~al.(2018)Lam, lei Kou, Xie, Chu, and He]{Lametal2018}
+Lam, K.P.; Kou, H.L.; Xie, B.; Chu, J.; He, J.
+\newblock Use of a Waste-Based Binder for High Water Content Soil Treatment.
+\newblock {\em J. Mater. Civ. Eng.} {\bf 2018}, {\em
+  30},~06018009.
+\newblock {\url{https://doi.org/10.1061/(ASCE)MT.1943-5533.0002385}}.
+
+\bibitem[Jeremiah et~al.(2021)Jeremiah, Abbey, Booth, and
+  Kashyap]{geotechnics1020021}
+Jeremiah, J.J.; Abbey, S.J.; Booth, C.A.; Kashyap, A.
+\newblock Geopolymers as Alternative Sustainable Binders for Stabilization of
+  Clays---\linebreak A Review.
+\newblock {\em Geotechnics} {\bf 2021}, {\em 1},~439--459.
+\newblock {\url{https://doi.org/10.3390/geotechnics1020021}}.
+
+\bibitem[Moustafa et~al.(1981)Moustafa, Bazaraa, and Nour El~Din]{Moustafa}
+Moustafa, A.B.; Bazaraa, A.R.; Nour El~Din, A.R.
+\newblock Soil stabilization by polymeric materials.
+\newblock {\em Die Angew. Makromol. Chem.} \mbox{{\bf 1981}, {\em
+  97},~1--12.}
+\newblock {\url{https://doi.org/10.1002/apmc.1981.050970101}}.
+
+\bibitem[Liu et~al.(2023)Liu, Che, Lan, Hu, Qi, Song, Sun, Jing, Qian, and
+  Qi]{LIU2023101044}
+Liu, J.; Che, W.; Lan, X.; Hu, M.; Qi, M.; Song, Z.; Sun, M.; Jing, M.; Qian,
+  W.; Qi, C.
+\newblock Performance and mechanism of a novel biopolymer binder for clayey
+  soil stabilization: Mechanical properties and microstructure characteristics.
+\newblock {\em Transp. Geotech.} \mbox{{\bf 2023}, {\em 42},~101044.}
+\newblock {\url{https://doi.org/10.1016/j.trgeo.2023.101044}}.
+
+\bibitem[Consoli et~al.(2019)Consoli, Marin, Samaniego, Heineck, and
+  Johann]{Consoli}
+Consoli, N.C.; Marin, E.J.B.; Samaniego, R.A.Q.; Heineck, K.S.; Johann, A.D.R.
+\newblock Use of Sustainable Binders in Soil Stabilization.\linebreak 
+\newblock {\em J. Mater. Civ. Eng.} {\bf 2019}, {\em
+  31},~06018023.
+\newblock {\url{https://doi.org/10.1061/(ASCE)MT.1943-5533.0002571}}.
+
+\bibitem[Tabassum et~al.(2022)Tabassum, Rahman, and
+  Bheemasetti]{TABASSUM2022100880}
+Tabassum, T.; Rahman, R.; Bheemasetti, T.V.
+\newblock Thermal-mechanical properties of stabilized clayey sand subgrade
+  soils.
+\newblock {\em Transp. Geotech.} {\bf 2022}, {\em 37},~100880.
+\newblock {\url{https://doi.org/10.1016/j.trgeo.2022.100880}}.
+
+\bibitem[Filho et~al.(2021)Filho, Saldanha, da~Rocha, and Consoli]{Filho}
+Filho, H.C.S.; Saldanha, R.B.; da~Rocha, C.G.; Consoli, N.C.
+\newblock Sustainable Binders Stabilizing Dispersive Clay.
+\newblock {\em J. Mater. Civ. Eng.} {\bf 2021}, {\em
+  33},~06020026.
+\newblock {\url{https://doi.org/10.1061/(ASCE)MT.1943-5533.0003595}}.
+
+\bibitem[Howard and Anderson(2017)]{Howard}
+Howard, I.L.; Anderson, B.K. Time-Dependent Properties of Very High Moisture
+  Content Fine Grained Soils Stabilized with Portland and Slag Cement.
+\newblock In {\em Geotechnical Frontiers 2017}; ASCE: \hl{Reston, VA, USA,} 2017; pp. 891--899.
+\newblock {\url{https://doi.org/10.1061/9780784480472.095}}.
+
+\bibitem[Igea~Romera et~al.(2013)Igea~Romera, Martínez-Ramírez, Lapuente, and
+  Blanco-Varela]{Romera}
+Igea~Romera, J.; Martínez-Ramírez, S.; Lapuente, P.; Blanco-Varela, M.T.
+\newblock {Assessment of the physico-mechanical behaviour of gypsum-lime repair
+  mortars as a function of curing time}.
+\newblock {\em Environ. Earth Sci.} {\bf 2013}, {\em 70},~1605--1618.
+\newblock {\url{https://doi.org/10.1007/s12665-013-2245-y}}.
+
+\bibitem[Chrysochoou et~al.(2010)Chrysochoou, Grubb, Drengler, and
+  Malasavage]{Chrysochoouetal2010}
+Chrysochoou, M.; Grubb, D.G.; Drengler, K.L.; Malasavage, N.E.
+\newblock Stabilized Dredged Material. III: Mineralogical Perspective.\linebreak 
+\newblock {\em J. Geotech. Geoenviron. Eng.} {\bf
+  2010}, {\em 136},~1037--1050.
+\newblock {\url{https://doi.org/10.1061/(ASCE)GT.1943-5606.0000292}}.
+
+\bibitem[Shrestha and Al-Tabbaa(2012)]{Shrestha}
+Shrestha, R.; Al-Tabbaa, A. Development of Predictive Models for Cement
+  Stabilized Soils.
+\newblock In {\em Grouting and Deep Mixing 2012}; ASCE: \hl{Reston, VA, USA,} 2012; pp. 221--230.
+\newblock {\url{https://doi.org/10.1061/9780784412350.0008}}.
+
+\bibitem[Oliveira et~al.(2014)Oliveira, Correia, and Lopes]{Oliveiraetal2014}
+Oliveira, P.J.V.; Correia, A.A.S.; Lopes, T.J.S.
+\newblock Effect of Organic Matter Content and Binder Quantity on the Uniaxial
+  Creep Behavior of an Artificially Stabilized Soil.
+\newblock {\em J. Geotech. Geoenviron. Eng.} {\bf
+  2014}, {\em 140},~04014053.
+\newblock {\url{https://doi.org/10.1061/(ASCE)GT.1943-5606.0001158}}.
+
+\bibitem[Oliveira et~al.(2013)Oliveira, Correia, and Garcia]{Oliveiraetal2013}
+Oliveira, P.J.V.; Correia, A.A.S.; Garcia, M.R.
+\newblock Effect of Stress Level and Binder Composition on Secondary
+  Compression of an Artificially Stabilized Soil.
+\newblock {\em J. Geotech. Geoenviron. Eng.} {\bf
+  2013}, {\em 139},~810--820.
+\newblock {\url{https://doi.org/10.1061/(ASCE)GT.1943-5606.0000762}}.
+
+\bibitem[Khajeh et~al.(2020)Khajeh, Jamshidi~Chenari, and Payan]{Khajeh}
+Khajeh, A.; Jamshidi~Chenari, R.; Payan, M.
+\newblock {A Simple Review of Cemented Non-conventional Materials: Soil
+  Composites}.
+\newblock {\em Geotech. Geol. Eng.} {\bf 2020}, {\em
+  38},~1019--1040.
+\newblock {\url{https://doi.org/10.1007/s10706-019-01090-x}}.
+
+\bibitem[Huang et~al.(2022)Huang, Shi, Wang, Dong, Wang, and
+  Zhao]{HUANG2022126702}
+Huang, X.; Shi, Z.; Wang, Z.; Dong, J.; Wang, X.; Zhao, X.
+\newblock Microstructure and performances of sludge soil stabilized by
+  fluorogypsum-based cementitious binder.
+\newblock {\em Constr. Build. Mater.} {\bf 2022}, {\em
+  325},~126702.
+\newblock {\url{https://doi.org/10.1016/j.conbuildmat.2022.126702}}.
+
+\bibitem[Hallal et~al.(2018)Hallal, Sadek, and Najjar]{Hallal}
+Hallal, M.M.; Sadek, S.; Najjar, S.S.
+\newblock Evaluation of Engineering Characteristics of Stabilized Rammed-Earth
+  Material Sourced from Natural Fines-Rich Soil.
+\newblock {\em J. Mater. Civ. Eng.} {\bf 2018}, {\em
+  30},~04018273.
+\newblock {\url{https://doi.org/10.1061/(ASCE)MT.1943-5533.0002481}}.
+
+\bibitem[Guo et~al.(2021)Guo, Qiu, Chen, Wang, and Yang]{Guoetal2021}
+Guo, W.; Qiu, J.; Chen, Q.; Wang, X.; Yang, T.
+\newblock Low-Temperature Calcination of Belite-Calcium Sulphoaluminate Cement
+  Clinker and the Hydration Process.
+\newblock {\em J. Mater. Civ. Eng.} {\bf 2021}, {\em
+  33},~04021350.
+\newblock {\url{https://doi.org/10.1061/(ASCE)MT.1943-5533.0003984}}.
+
+\bibitem[Chi et~al.(2021)Chi, Wang, Lu, Wang, Liu, and Liu]{CHI2021138699}
+Chi, L.; Wang, Z.; Lu, S.; Wang, H.; Liu, K.; Liu, W.
+\newblock Early assessment of hydration and microstructure evolution of
+  belite-calcium sulfoaluminate cement pastes by electrical impedance
+  spectroscopy.
+\newblock {\em Electrochim. Acta} {\bf 2021}, {\em 389},~138699.
+\newblock {\url{https://doi.org/10.1016/j.electacta.2021.138699}}.
+
+\bibitem[Lindh and Lemenkova(2023)]{a16060303}
+Lindh, P.; Lemenkova, P.
+\newblock Optimized Workflow Framework in Construction Projects to Control the
+  Environmental Properties of Soil.
+\newblock {\em Algorithms} {\bf 2023}, {\em 16}, {303.}
+\newblock {\url{https://doi.org/10.3390/a16060303}}.
+
+\bibitem[Yesiller et~al.(2012)Yesiller, Hanson, and Usmen]{Yesiller}
+Yesiller, N.; Hanson, J.L.; Usmen, M.A. Ultrasonic Assessment of Stabilized
+  Soils.
+\newblock In {\em Soft Ground Technology}; ASCE: \hl{Reston, VA, USA,}  2012; pp. 170--181.
+\newblock {\url{https://doi.org/10.1061/40552(301)14}}.
+
+\bibitem[Zhang et~al.(2021)Zhang, Shen, Yang, Zhang, Wang, Hou, Sun, and
+  Li]{ZHANG2021143}
+Zhang, J.; Shen, Y.; Yang, G.; Zhang, H.; Wang, Y.; Hou, X.; Sun, Q.; Li, G.
+\newblock Inconsistency of changes in uniaxial compressive strength and P-wave
+  velocity of sandstone after temperature treatments.
+\newblock {\em J. Rock Mech. Geotech. Eng.} {\bf
+  2021}, {\em 13},~143--153.
+\newblock {\url{https://doi.org/10.1016/j.jrmge.2020.05.008}}.
+
+\bibitem[Lindh and Lemenkova(2023)]{Lindh2023JMBM}
+Lindh, P.; Lemenkova, P.
+\newblock Seismic monitoring of strength in stabilized foundations by P-wave
+  reflection and downhole geophysical logging for drill borehole core.
+\newblock {\em J. Mech. Behav. Mater.} {\bf 2023},
+  {\em 32},~20220290.
+\newblock {\url{https://doi.org/10.1515/jmbm-2022-0290}}.
+
+\bibitem[Abdi et~al.(2018)Abdi, Khanlari, and Jamshidi]{Abdi}
+Abdi, Y.; Khanlari, G.R.; Jamshidi, A.
+\newblock {Correlation Between Mechanical Properties of Sandstones and P-Wave
+  Velocity in Different Degrees of Saturation}.
+\newblock {\em Geotech. Geol. Eng.} {\bf 2018}, \hl{1--10.} %MDPI: Please provide volume number.
+\newblock {\url{https://doi.org/10.1007/s10706-018-0721-6}}.
+
+\bibitem[Lopes and Lebedev(2012)]{Lopes}
+Lopes, S.; Lebedev, M.
+\newblock Research note: Laboratory study of the influence of changing the
+  injection rate on the geometry of the fluid front and on P-wave ultrasonic
+  velocities in sandstone.
+\newblock {\em Geophys. Prospect.} {\bf 2012}, {\em 60},~572--580.
+\newblock {\url{https://doi.org/10.1111/j.1365-2478.2011.01009.x}}.
+
+\bibitem[Lindh and Lemenkova(2022)]{Lindh202210}
+Lindh, P.; Lemenkova, P.
+\newblock {Seismic velocity of P-waves to evaluate strength of stabilized soil
+  for Svenska Cellulosa Aktiebolaget Biorefinery Östrand AB, Timrå}.
+\newblock {\em Bull. Pol. Acad. Sci. Tech. Sci.}
+  {\bf 2022}, {\em 70},~\hl{e141593}.
+\newblock {\url{https://doi.org/10.24425/bpasts.2022.141593}}.
+
+\bibitem[Cristelo et~al.(2015)Cristelo, Cunha, Dias, Gomes, Miranda, and
+  Araújo]{CRISTELO20151}
+Cristelo, N.; Cunha, V.M.; Dias, M.; Gomes, A.T.; Miranda, T.; Araújo, N.
+\newblock Influence of discrete fibre reinforcement on the uniaxial compression
+  response and seismic wave velocity of a cement-stabilised sandy-clay.
+\newblock {\em Geotext. Geomembr.} {\bf 2015}, {\em 43},~1--13.
+\newblock {\url{https://doi.org/10.1016/j.geotexmem.2014.11.007}}.
+
+\bibitem[Wang et~al.(2022{\natexlab{a}})Wang, Nagarajaiah, Shi, and
+  Zhou]{WANG2022114963}
+Wang, L.; Nagarajaiah, S.; Shi, W.; Zhou, Y.
+\newblock Seismic performance improvement of base-isolated structures using a
+  semi-active tuned mass damper.
+\newblock {\em Eng. Struct.} {\bf 2022}, {\em 271},~114963.
+\newblock {\url{https://doi.org/10.1016/j.engstruct.2022.114963}}.
+
+\bibitem[Wang et~al.(2022{\natexlab{b}})Wang, Shi, and Zhou]{WANG2022107298}
+Wang, L.; Shi, W.; Zhou, Y.
+\newblock Adaptive-passive tuned mass damper for structural aseismic protection
+  including soil-structure interaction.
+\newblock {\em Soil Dyn. Earthq. Eng.} {\bf 2022}, {\em
+  158},~107298.
+\newblock {\url{https://doi.org/10.1016/j.soildyn.2022.107298}}.
+
+\bibitem[Ardah et~al.(2016)Ardah, Abu-Farsakh, and Chen]{Ardah}
+Ardah, A.; Abu-Farsakh, M.; Chen, Q. Evaluating the Performance of
+  Cementitious Treated/Stabilized Very Weak and Wet Subgrade Soils for
+  Sustainable Pavement.
+\newblock In Proceedings of the Geo-Chicago, \hl{Chicago, IL, USA, 14--18 August} 2016; ASCE: \hl{Reston, VA, USA,} 2016; pp. 567--576.
+\newblock {\url{https://doi.org/10.1061/9780784480137.054}}.
+
+\bibitem[Sree Lakshmi~Devi et~al.(2022)Sree Lakshmi~Devi, Venkata Siva
+  Rama~Prasad, and Srinivasa~Rao]{Sree}
+Sree Lakshmi~Devi, G.; Venkata Siva Rama~Prasad, C.; Srinivasa~Rao, P.
+\newblock Compressive Strength of Quaternary Blended Self-Compacting Concrete
+  Made with Supplementary Cementitious Materials through Regression Analysis.
+\newblock In \emph{Recent Advances in Civil Engineering};  
+ Kumar, P.G., Subramaniam, K.V.L., Santhakumar, S.M., Satyam~D.N., Eds.; \hl{Springer:} %MDPI: Newly added  information. Please confirm.
+ Singapore,
+   2022; pp. \hl{317--329.} %MDPI: We removed extra information ``IOP conference series: Materials science and engineering, vol 1006, No 1, IOP Publishing, pp 012020, 2020''. Please confirm if should be make to new ref. item and reorder of reference items into numerical order.
+
+
+\bibitem[Corrêa-Silva et~al.(2022)Corrêa-Silva, Cristelo, Rouainia, Araújo,
+  and Miranda]{su142113736}
+Corrêa-Silva, M.; Cristelo, N.; Rouainia, M.; Araújo, N.; Miranda, T.
+\newblock Constitutive Behaviour of a Clay Stabilised with Alkali-Activated
+  Cement Based on Blast Furnace Slag.
+\newblock {\em Sustainability} {\bf 2022}, {\em 14}, {13736.}
+\newblock {\url{https://doi.org/10.3390/su142113736}}.
+
+\bibitem[Yu et~al.(2018)Yu, Kim, and Lee]{Yu}
+Yu, J.D.; Kim, N.Y.; Lee, J.S.
+\newblock Nondestructive Integrity Evaluation of Soil Nails Using Longitudinal
+  Waves.
+\newblock {\em J. Geotech. Geoenviron. Eng.} {\bf
+  2018}, {\em 144},~04018080.
+\newblock {\url{https://doi.org/10.1061/(ASCE)GT.1943-5606.0001976}}.
+
+\bibitem[A. and P-O.(2011)]{ZefferSamuelsson}
+\hl{Zeffer, A.} %MDPI: We revised the author name, please confirm
+ \emph{Sedimentprovtagning i Småbåtshamnar i Stenungsund [Sediment
+  Sampling in Marinas in Stenungsund]};  
+\newblock \hl{Stenungsunds Kommun,} %MDPI: We made ref into book format. Please add the name of the publisher before city or please add the URL link for the ref
+ Sweden, 2011;
+\newblock  62p. (In Swedish)
+
+\bibitem[Carling et~al.(2006)Carling, Ländell, Håkansson, and
+  Myrhede]{Carling}
+Carling, M.; Ländell, M.; Håkansson, K.; Myrhede, E.
+\newblock {\em Täckning av Deponier med Aska och Slam---Erfarenheter från
+  Tre Fältförsök [Covering Landfills with Ash and Sludge---Experiences
+  from Three Field Trials]}; {VA-Forsk Svenskt Vatten AB}: Stockholm, Sweden,
+  2006;
+\newblock 122p. (In Swedish) 
+
+\bibitem[SGI(2011)]{SGI2011}
+SGI.
+\newblock \emph{Stabilisering och Solidifiering av Förorenade Muddermassor. Stabcon};
+\newblock Technical Report 1-1009-0647; Stabilization and Solidification of Contaminated Dredge Masses. SGI  Information 20; %MDPI: We moved information before publisher. Please confirm.
+ Swedish Geotechnical Institute (SGI):  Linköping, Sweden,  2011. 
+
+\bibitem[{Swedish Institute for Standards (SIS)}(2011)]{SIS2011}
+\emph{\hl{SS-EN} %MDPI: We formatted it as standard format. Please confirm and same below.
+ 197-1:2011};
+\newblock {Cement---Part 1: Composition, Specifications and Conformity Criteria
+  for Common Cements}. Swedish Institute for Standards (SIS): {Stockholm, Sweden,} 2011.
+\newblock
+  Available online: \url{https://www.sis.se/en/produkter/construction-materials-and-building/construction-materials/cement-gypsum-lime-mortar/ssen197120112/} \hl{(accessed on).} %MDPI: Please add the access date (Format: Date Month Year). e.g., (accessed on 1 January 2020).
+
+
+\bibitem[{Swedish Institute for Standards (SIS)}(2006)]{SIS2006}
+\emph{SS-EN 15167-1:2006};
+\newblock {Ground Granulated Blast Furnace Slag for Use in Concrete, Mortar and
+  Grout---Part 1: Definitions, Specifications and Conformity Criteria}. Swedish Institute for Standards (SIS): {Stockholm, Sweden,} 2006.      Available online: \url{https://www.sis.se/en/produkter/standardization/vocabularies/construction-materials-and-building-vocabularies/ssen1516712006/} \hl{(accessed on}).
+
+
+\bibitem[de~Oliveira et~al.(2019)de~Oliveira, Thewes, and
+  Diederichs]{OLIVEIRA2019103110}
+de~Oliveira, D.G.; Thewes, M.; Diederichs, M.S.
+\newblock \textls[-15]{Clogging and flow assessment of cohesive soils for EPB tunnelling:
+  Proposed laboratory tests for soil characterization.}
+\newblock {\em Tunn. Undergr. Space Technol.} {\bf 2019}, {\em
+  94},~103110.
+\newblock {\url{https://doi.org/10.1016/j.tust.2019.103110}}.
+
+\bibitem[Ramírez and Korkiala-Tanttu(2023)]{RAMIREZ2023100920}
+Ramírez, A.L.; Korkiala-Tanttu, L.
+\newblock Stabilization of Malmi soft clay with traditional and low-CO$_2$
+  binders.
+\newblock {\em Transp. Geotech.} \mbox{{\bf 2023}, {\em 38},~100920.}
+\newblock {\url{https://doi.org/10.1016/j.trgeo.2022.100920}}.
+
+\bibitem[Asi(2001)]{Asi}
+Asi, I.M.
+\newblock Stabilization of Sebkha Soil Using Foamed Asphalt.
+\newblock {\em J. Mater. Civ. Eng.} {\bf 2001}, {\em
+  13},~325--331.
+\newblock {\url{https://doi.org/10.1061/(ASCE)0899-1561(2001)13:5(325)}}.
+
+\bibitem[Lindh and Lemenkova(2021)]{Lemenkova202139}
+Lindh, P.; Lemenkova, P.
+\newblock {Resonant Frequency Ultrasonic P-Waves for Evaluating Uniaxial
+  Compressive Strength of the Stabilized Slag–Cement Sediments}.
+\newblock {\em Nord. Concr. Res.} {\bf 2021}, {\em 65},~39--62.
+\newblock {\url{https://doi.org/10.2478/ncr-2021-0012}}.
+
+\bibitem[Dutta et~al.(2020)Dutta, Otsubo, Kuwano, and Sato]{DUTTA20201269}
+Dutta, T.; Otsubo, M.; Kuwano, R.; Sato, T.
+\newblock Estimating multidirectional stiffness of soils using planar
+  piezoelectric transducers in a large triaxial apparatus.
+\newblock {\em Soils Found.} {\bf 2020}, {\em 60},~1269--1286.
+\newblock {\url{https://doi.org/10.1016/j.sandf.2020.08.002}}.
+
+\bibitem[Astuto et~al.(2023)Astuto, Molina-Gómez, Bilotta, {da Fonseca}, and
+  Flora]{Astuto}
+\textls[-15]{Astuto, G.; Molina-Gómez, F.; Bilotta, E.; da Fonseca, A.V.; Flora, A.}
+\newblock {\textls[-15]{Some remarks on the assessment of P-wave velocity in laboratory
+  tests for evaluating the degree of saturation}}.
+\newblock {\em Acta Geotech.} {\bf 2023}, {\em 18},~777--790.
+\newblock {\url{https://doi.org/10.1007/s11440-022-01610-9}}.
+
+\bibitem[Brignoli et~al.(1996)Brignoli, Gotti, and Stokoe]{Brignoli}
+Brignoli, E.G.; Gotti, M.; Stokoe, K.H.
+\newblock {Measurement of shear waves in laboratory specimens by means of
+  piezoelectric transducers}.
+\newblock {\em Geotech. Test. J.} {\bf 1996}, {\em 19},~384--397.
+\newblock {\url{https://doi.org/10.1520/gtj10716j}}.
+
+\bibitem[Suwal and Kuwano(2013)]{SUWAL2013510}
+Suwal, L.P.; Kuwano, R.
+\newblock Disk shaped piezo-ceramic transducer for P and S wave measurement in
+  a laboratory soil specimen.
+\newblock {\em Soils Found.} {\bf 2013}, {\em 53},~510--524.
+\newblock {\url{https://doi.org/10.1016/j.sandf.2013.06.004}}.
+
+\bibitem[Irfan and Uchimura(2013)]{Irfan}
+Irfan, M.; Uchimura, T. Measuring Shear and Compression Wave Velocities in
+  Laboratory Triaxial Tests Using Disk Shaped Composite P/S Piezoelectric
+  Transducer.
+\newblock In Proceedings of the  IACGE 2013, \hl{Chengdu, China, 25--27 October} 2013;   IACGE: \hl{Irvine, CA, USA,} 2013; pp. 414--421.
+\newblock {\url{https://doi.org/10.1061/9780784413128.049}}.
+
+\bibitem[Shabani and Kioumarsi(2023)]{SHABANI2023116589}
+Shabani, A.; Kioumarsi, M.
+\newblock Seismic assessment and strengthening of a historical masonry bridge
+  considering soil-structure interaction.
+\newblock {\em Eng. Struct.} {\bf 2023}, {\em 293},~116589.
+\newblock {\url{https://doi.org/10.1016/j.engstruct.2023.116589}}.
+
+\bibitem[Tamura et~al.(2002)Tamura, Tokimatsu, Abe, and Sato]{2002121}
+Tamura, S.; Tokimatsu, K.; Abe, A.; Sato, M.
+\newblock Effects of Air Bubbles on B-Value and P-Wave Velocity of a Partly
+  Saturated Sand.
+\newblock {\em Soils Found.} {\bf 2002}, {\em 42},~121--129.
+\newblock {\url{https://doi.org/10.3208/sandf.42.121}}.
+
+\bibitem[Drnevich et~al.(1978)Drnevich, Hardin, and Shippy]{Drnevich}
+Drnevich, V.P.; Hardin, B.O.; Shippy, D.J.
+\newblock {Modulus and damping of soils by the resonant-column method}.
+\newblock {\em {\hl{Dyn. Geotech. Test. ASTM STP} %MDPI: Please reconfirm journal name because different from information we found.
+}} {\bf 1978}, {\em
+  654},~\hl{91--125.} %MDPI: We removed publisher name from journal type. Please confirm.
+  {\url{https://doi.org/10.1520/STP35673S}}.
+
+\bibitem[Li et~al.(2023)Li, Xue, Wang, Zhang, Dong, and Yu]{LI2023108081}
+Li, G.; Xue, Y.; Wang, R.; Zhang, H.; Dong, Z.; Yu, D.
+\newblock Multiphase wavefield inversion methodology for seismic analysis of
+  soil-structure interaction systems.
+\newblock {\em Soil Dyn. Earthq. Eng.} {\bf 2023}, {\em
+  173},~108081.
+\newblock {\url{https://doi.org/10.1016/j.soildyn.2023.108081}}.
+
+\bibitem[{Umut Umu}(2023)]{UMUTUMU2023101415}
+{Umut Umu}, S.
+\newblock Assessment of sustainable expanded glass granules for enhancing
+  shallow soil stabilization and dynamic behaviour of clay through resonant
+  column tests.
+\newblock {\em Eng. Sci. Technol. Int. J.}
+  {\bf 2023}, {\em 42},~101415.
+\newblock {\url{https://doi.org/10.1016/j.jestch.2023.101415}}.
+
+\bibitem[Liu et~al.(2020)Liu, Ning, Hu, Liu, Liu, Peng, Wang, Hu, and
+  Zhang]{LIU2020104620}
+Liu, Z.; Ning, F.; Hu, G.; Liu, L.; Liu, C.; Peng, L.; Wang, D.; Hu, W.; Zhang,
+  Z.
+\newblock Characterization of seismic wave velocity and attenuation and
+  interpretation of tetrahydrofuran hydrate-bearing sand using resonant column
+  testing.
+\newblock {\em Mar. Pet. Geol.} \mbox{{\bf 2020}, {\em 122},~104620.}
+\newblock {\url{https://doi.org/10.1016/j.marpetgeo.2020.104620}}.
+
+\bibitem[Kanellopoulos et~al.(2022)Kanellopoulos, Psycharis, Yang, Jeremić,
+  Anastasopoulos, and Stojadinović]{KANELLOPOULOS2022107366}
+Kanellopoulos, C.; Psycharis, N.; Yang, H.; Jeremić, B.; Anastasopoulos, I.;
+  Stojadinović, B.
+\newblock Seismic resonant metamaterials for the protection of an
+  elastic-plastic SDOF system against vertically propagating seismic shear
+  waves (SH) in nonlinear soil.
+\newblock {\em Soil Dyn. Earthq. Eng.} {\bf 2022}, {\em
+  162},~107366.
+\newblock {\url{https://doi.org/10.1016/j.soildyn.2022.107366}}.
+
+\bibitem[Lindh and Lemenkova(2022)]{Lindh202224}
+Lindh, P.; Lemenkova, P.
+\newblock {Dynamics of Strength Gain in Sandy Soil Stabilised with Mixed
+  Binders Evaluated by Elastic P-Waves during Compressive Loading}.
+\newblock {\em Materials} {\bf 2022}, {\em 15},~\hl{7798}.
+\newblock {\url{https://doi.org/10.3390/ma15217798}}.
+
+\bibitem[{Swedish Institute for Standards (SIS)}(2018)]{SIS2018}
+\emph{SS-EN 16907-4:2018};
+\newblock {Earthworks---Part 4: Soil Treatment with Lime and/or Hydraulic
+  Binders}.
+\newblock Swedish Institute for Standards (SIS): {Stockholm, Sweden,}  2018.
+
+\bibitem[{Swedish Institute for Standards (SIS)}(2003)]{SIS2003}
+ \emph{SS-EN 12457-2};
+\newblock {Characterization of Waste---Leaching---Compliance Test for Leaching
+  of Granular Waste Materials and Sludges---Part 2: One Stage Batch Test at a
+  Liquid to Solid Ratio of 10 L/kg for Materials with Particle Size below 4 mm
+  (without or with Size Reduction)}. Swedish Institute for Standards (SIS): {Stockholm, Sweden,}  2003.
+\newblock
+  Available online: \url{https://www.sis.se/en/produkter/environment-health-protection-safety/wastes/solid-wastes/ssen124572/} (\hl{accessed on}).
+
+\bibitem[Bumanis et~al.(2019)Bumanis, Zorica, Bajare, and Korjakins]{Bumanis}
+Bumanis, G.; Zorica, J.; Bajare, D.; Korjakins, A.
+\newblock {Effect of water--binder ratio on properties of phosphogypsum binder}.\linebreak 
+\newblock In Proceedings of the 4th International Conference on Innovative Materials, Structures
+  and Technologies (IMST 2019), Riga, Latvia, \hl{25--27 September} 2019; Volume 660, p. 012071.
+\newblock {\url{https://doi.org/10.1088/1757-899X/660/1/012071}}.
+
+\bibitem[Han et~al.(2022)Han, Qin, Wang, and Zhang]{HAN2022e01660}
+Han, Y.; Qin, Y.; Wang, Y.; Zhang, X.
+\newblock The effect of different ages and water--binder ratios on the
+  mechanical properties of circulating fluidized bed combustion desulfurization
+  slag cement-soil.
+\newblock {\em Case Stud. Constr. Mater.} {\bf 2022}, {\em
+  17},~e01660.
+\newblock {\url{https://doi.org/10.1016/j.cscm.2022.e01660}}.
+
+\bibitem[Hay and Celik(2023)]{HAY2023131529}
+Hay, R.; Celik, K.
+\newblock Effects of water-to-binder ratios (w/b) and superplasticizer on
+  physicochemical, microstructural, and mechanical evolution of limestone
+  calcined clay cement (LC3).
+\newblock {\em Constr. Build. Mater.} {\bf 2023}, {\em
+  391},~131529.
+\newblock {\url{https://doi.org/10.1016/j.conbuildmat.2023.131529}}.
+
+\bibitem[Abudeif et~al.(2023)Abudeif, Abdel~Aal, Abdelbaky, Abdel~Gowad, and
+  Mohammed]{app13042745}
+Abudeif, A.M.; Abdel~Aal, G.Z.; Abdelbaky, N.F.; Abdel~Gowad, A.M.; Mohammed,
+  M.A.
+\newblock Evaluation of Engineering Site and Subsurface Structures Using
+  Seismic Refraction Tomography: A Case Study of Abydos Site, Sohag
+  Governorate, Egypt.
+\newblock {\em Appl. Sci.} {\bf 2023}, {\em 13}, {2745.}
+\newblock {\url{https://doi.org/10.3390/app13042745}}.
+
+\bibitem[Harrypersad-Daniel et~al.(2022)Harrypersad-Daniel, Blake, and
+  Ramsook]{HARRYPERSADDANIEL2022104557}
+Harrypersad-Daniel, A.; Blake, O.; Ramsook, R.
+\newblock Determining the static Young’s modulus and Poisson’s ratio, and
+  compressive strength of the friable Erin Formation rocks using P-wave
+  velocity.
+\newblock {\em J. Appl. Geophys.} {\bf 2022}, {\em 198},~104557.
+\newblock {\url{https://doi.org/10.1016/j.jappgeo.2022.104557}}.
+
+\bibitem[{Venkatarama Reddy}(2022)]{Reddy2022}
+{Venkatarama Reddy}, B.V. Stabilised Compressed Earth Block Masonry.
+\newblock In {\em Compressed Earth Block {\&} Rammed Earth Structures};
+  Springer Nature: Singapore, 2022; pp. 229--265.
+\newblock {\url{https://doi.org/10.1007/978-981-16-7877-6_7}}.
+
+\bibitem[Maher et~al.(2008)Maher, Schaefer, and Yang]{Maheretal2008}
+Maher, A.; Schaefer, V.; Yang, D. In-Situ Deep Soil Mixing for Solidification
+  of Soft Estuarine Sediments Shear Strength.\linebreak 
+\newblock In Proceedings of the GeoCongress 2008, \hl{New Orleans, LA, USA, 9--12 March 2008;} ASCE: \hl{Reston, VA, USA,}  2008; pp. 668--675.
+\newblock {\url{https://doi.org/10.1061/40970(309)84}}.
+
+\bibitem[Maher and Ho(1994)]{MaherHo1994}
+Maher, M.H.; Ho, Y.C.
+\newblock Mechanical Properties of Kaolinite/Fiber Soil Composite.
+\newblock {\em J. Geotech. Eng.} {\bf 1994}, {\em
+  120},~1381--1393.
+\newblock {\url{https://doi.org/10.1061/(ASCE)0733-9410(1994)120:8(1381)}}.
+
+\end{thebibliography}
+
+%\nocite{*}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\PublishersNote{}
+\end{adjustwidth}
+\end{document}
